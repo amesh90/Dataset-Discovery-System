@@ -206,14 +206,29 @@ def main():
                 print(resultMap[i])
                 print("\n")
 
-Debug = '1'
 
+
+def snapshotOfGraph(api, resultMap, drs):
+    if debug == 1:
+        print('\nSnapshotOfGraph ..... Begin')
+        print(resultMap)
+    resultMapWithProv = drs.__dict__()
+    if debug == 1:
+        print(str(resultMapWithProv))
+        # print(resultMapWithProv['sources'])
+
+# =================
+# Web app demo (return snapshot of the resutl graph)
+# =================
+# =================
+# for the Webapp demo
+# =================
 def dataDicoveryDemo_main(keywords: str, model: str):
     
     #========================================== 
     # initialization
     #========================================== 
-    if Debug == '1':
+    if debug == 1:
         print ('testmode'+model+' is loading!')
     if '1' in model:
         path = '/Users/princess/Documents/PhD/thesis/code/aurum-datadiscovery-master/mytest/testmodel1/'
@@ -335,6 +350,150 @@ def dataDicoveryDemo_main(keywords: str, model: str):
             # print(i)
             print(resultMap[i])
             print("\n")
+
+
+    # -----------
+    # create the snapshot of the graph
+    # -----------
+    # snapshotOfGraph(api, resultMap, res)
+
+    return resultMap
+# =================
+# for the Webapp demo ( Keywords + return list of fields as table )
+# =================
+def dataDicoveryDemo_main(keywords: str, model: str):
+    
+    #========================================== 
+    # initialization
+    #========================================== 
+    if debug == 1:
+        print ('testmode'+model+' is loading!')
+    if '1' in model:
+        path = '/Users/princess/Documents/PhD/thesis/code/aurum-datadiscovery-master/mytest/testmodel1/'
+    elif '2' in model:
+        path = '/Users/princess/Documents/PhD/thesis/code/aurum-datadiscovery-master/mytest/testmodel2/'
+    elif '3' in model:
+        path = '/Users/princess/Documents/PhD/thesis/code/aurum-datadiscovery-master/mytest/testmodel3/'
+    keywords = keywords.split(',')
+
+    if debug == 1:
+        print (keywords)
+    # ddapi:
+    network = deserialize_network(path)
+    api = API(network)
+    api.init_store()
+
+    # algebra
+    # network = deserialize_network(path)
+    # store_client = StoreHandler()
+    # api = API(network=network, store_client=store_client)
+
+    #========================================== 
+    # print ("press 'h' for help\n'quit' for exit\n")
+    # while True:
+        
+    #     inputStr = str(input())
+    #     if(inputStr == 'quit'):
+    #         break
+    #     elif(inputStr == 'h'):
+    #         print("\n====================================\nHelp:\n")
+    #         print("Enter Keywords with comma separated\n")
+    #         print("====================================\n")
+    #     else:
+    #         keywords = inputStr.split(',')
+    #         print("Searching for the keywords:\n")
+    #         print(keywords)
+    #         # print("\n\n")
+    #         print("\n\nSearching ... \n\n")
+            
+            #==============
+            # Module 1: 
+            # - input: sample of attributes and values pairs
+            # - output: all tables that contain similar values 
+            #==============
+            
+            # list_attributes = ['name', 'type']
+            # list_samples = ['Purdue', 'public']
+            # results = virtual_schema_exhaustive_search(api, list_attributes, list_samples)
+            # print ("results:\n")
+            # print(results)
+
+            # OR .... 
+            # var = DoD(network, store_client)
+            # res = var.virtual_schema_exhaustive_search(list_attributes,list_samples)
+            # print(res)
+
+    #==============
+    # Module 2:
+    #==============
+    # for key in keywords:["tables"]=[]
+    resultMap = {}
+    # resultMap["tables"]=[]
+    # resultMap["fields"]={}
+
+    # resultMap["fieldnames"]=[]
+    # resultMap["fieldIds"]=[]
+
+    # we can do fuzzy or strict mathcing 
+    
+    # res = api.keywords_search(keywords, max_results=10)
+    res = api.fuzzy_keywords_match(keywords, max_results=10)
+    for el in res:
+        
+        nid,db_name,source_name,field_name,score = el
+        
+        #=============
+        # to get the contents
+        content = api.getContentValuesOfIndex(nid)
+        #=============
+        if debug == 1:
+            print("Source: %s, Field: %s"%(source_name, field_name))
+        # print("\n\n======================== Contents \n")
+        
+        # print(content)
+        if nid not in resultMap:
+            resultMap[nid] = {}
+            resultMap[nid]["source_name"] = source_name
+            resultMap[nid]["field_name"] = field_name
+            resultMap[nid]["score"] = score
+            resultMap[nid]["nid"] = nid
+
+    
+    
+    # print("\n\n======================== Entities \n")
+    # fields, entities = api.get_all_fields_entities()
+    # print(fields)
+    # print(entities)
+    # print("\n\n======================== SCHEMA \n")
+    #TODO: instead of split each keyword and search in the schema, I should search with ontology
+    for key in keywords:
+        keySplit = key.split(' ')
+        for k in keySplit:
+            res2 = api.schema_name_search(k, max_results=10)
+            for el in res2:
+                # print(str(el))
+                nid,db_name,source_name,field_name,score = el
+                if nid not in resultMap:
+                    resultMap[nid] = {}
+                    resultMap[nid]["source_name"] = source_name
+                    resultMap[nid]["field_name"] = field_name
+                    resultMap[nid]["score"] = score
+                    resultMap[nid]["nid"] = nid
+
+    if debug == 1:
+        print("\n================================\nFinally:\n\n")
+        # print (resultMap)
+        print("\n\nElements:\n")
+        for i in resultMap:
+            # print(i)
+            print(resultMap[i])
+            print("\n")
+
+
+    # -----------
+    # create the snapshot of the graph
+    # -----------
+    # snapshotOfGraph(api, resultMap, res)
 
     return resultMap
 	
