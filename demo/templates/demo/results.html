@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+
+<h1> Results </h1>
+
+<table style="width:100%">
+  <tr>
+    <th>Source Name </th>
+    <th>Field Name</th>
+    <th>Score</th>
+  </tr>
+ 	
+  {% for val in values %}
+  <tr>
+  	{% for key, r in val.items %}
+    <td>{{ r }}</td>
+    
+    {% endfor %}
+  </tr>
+  {% endfor %}
+  
+</table>
+
+
+<!-- <ul>
+    {% for val in values %}
+    	{% for key, r in val.items %}
+        <li>{{ key }}
+        </li>
+       
+
+      	{% endfor %}  
+    {% endfor %}
+</ul> -->
+
+
+</body>
+</html>

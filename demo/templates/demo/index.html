@@ -1,0 +1,11 @@
+
+{% if output %}
+    <ul>
+    {% for t in output %}
+        <li><a href="{% url 'demo:search' t %}"> {{ t }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No outputs are available.</p>
+{% endif %}
+

@@ -1,0 +1,965 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"demo",
+				"demoscript"
+			],
+			[
+				"search",
+				"searchForm"
+			],
+			[
+				"key",
+				"keywords"
+			],
+			[
+				"ma",
+				"max_results"
+			],
+			[
+				"result",
+				"resultMap"
+			],
+			[
+				"res",
+				"resultMap"
+			],
+			[
+				"store",
+				"store_client"
+			],
+			[
+				"c",
+				"columns"
+			],
+			[
+				"fie",
+				"field_name"
+			],
+			[
+				"input",
+				"inputStr"
+			],
+			[
+				"D",
+				"DoD"
+			],
+			[
+				"list",
+				"list_samples"
+			],
+			[
+				"table",
+				"table_drs"
+			],
+			[
+				"resu",
+				"result2"
+			],
+			[
+				"Read",
+				"readFirstRecords"
+			],
+			[
+				"print",
+				"println"
+			],
+			[
+				"read",
+				"reader2"
+			],
+			[
+				"wr",
+				"writer"
+			],
+			[
+				"cons",
+				"consumer"
+			],
+			[
+				"produ",
+				"producer"
+			],
+			[
+				"group",
+				"group_list"
+			],
+			[
+				"fea",
+				"featureType"
+			],
+			[
+				"lam",
+				"lambd"
+			],
+			[
+				"max",
+				"max_iter"
+			],
+			[
+				"tr",
+				"train_imgs"
+			],
+			[
+				"wi",
+				"withBias"
+			],
+			[
+				"fe",
+				"featureType"
+			],
+			[
+				"tun",
+				"tunelamda"
+			],
+			[
+				"l",
+				"lambd"
+			],
+			[
+				"pat",
+				"patches2"
+			],
+			[
+				"classi",
+				"classifiers"
+			],
+			[
+				"update",
+				"updateWeight"
+			],
+			[
+				"delta_",
+				"delta_4"
+			],
+			[
+				"del",
+				"delta_1"
+			],
+			[
+				"pred",
+				"predict"
+			],
+			[
+				"predi",
+				"predictions"
+			],
+			[
+				"hand",
+				"handle"
+			],
+			[
+				"train_l",
+				"train_lbl"
+			],
+			[
+				"tra",
+				"train_X"
+			],
+			[
+				"true",
+				"trueLabels"
+			],
+			[
+				"feature",
+				"featureType"
+			],
+			[
+				"wei",
+				"weights"
+			],
+			[
+				"training",
+				"trainingSize"
+			],
+			[
+				"trainin",
+				"trainingSize"
+			],
+			[
+				"gre",
+				"gradient"
+			],
+			[
+				"prev",
+				"prev_step"
+			],
+			[
+				"acc",
+				"accuracy"
+			],
+			[
+				"cla",
+				"classifiers"
+			],
+			[
+				"cost",
+				"cost_history"
+			],
+			[
+				"class",
+				"classCost_1"
+			],
+			[
+				"train",
+				"train_labels_C"
+			],
+			[
+				"feat",
+				"featureType"
+			],
+			[
+				"cnt",
+				"cntInv"
+			],
+			[
+				"cach",
+				"cachedWeights"
+			],
+			[
+				"tune",
+				"tuneRate"
+			],
+			[
+				"Tr",
+				"Training"
+			],
+			[
+				"x_",
+				"x_axis"
+			],
+			[
+				"test",
+				"testing_data"
+			],
+			[
+				"zer",
+				"zeros"
+			],
+			[
+				"tes",
+				"testing_data"
+			],
+			[
+				"as",
+				"astype"
+			],
+			[
+				"in",
+				"input"
+			],
+			[
+				"err",
+				"errCnt"
+			],
+			[
+				"predic",
+				"predictedLabel"
+			],
+			[
+				"maxI",
+				"maxIndx"
+			],
+			[
+				"sh",
+				"show2"
+			],
+			[
+				"labelU",
+				"labelUniqueCount"
+			],
+			[
+				"sampl",
+				"sampleIds"
+			],
+			[
+				"sam",
+				"sampleIds"
+			],
+			[
+				"tri",
+				"train_label"
+			],
+			[
+				"thre",
+				"threshold"
+			],
+			[
+				"attr",
+				"attributeId"
+			],
+			[
+				"samp",
+				"sampleIds"
+			],
+			[
+				"Hs",
+				"Hs1"
+			],
+			[
+				"cou",
+				"Counter"
+			],
+			[
+				"getIn",
+				"getInformationGain"
+			],
+			[
+				"s2",
+				"s2Ids"
+			],
+			[
+				"get",
+				"getEntropy"
+			],
+			[
+				"poss",
+				"possibleSplits"
+			],
+			[
+				"compute",
+				"computeThreshold"
+			],
+			[
+				"tot",
+				"totSize2"
+			],
+			[
+				"HT",
+				"HTarget"
+			],
+			[
+				"label",
+				"label_predict"
+			],
+			[
+				"thresho",
+				"threshold"
+			],
+			[
+				"thes",
+				"threshold"
+			],
+			[
+				"comp",
+				"computeThreshold"
+			],
+			[
+				"bestA",
+				"bestAttrId"
+			],
+			[
+				"child",
+				"childSampleIds"
+			],
+			[
+				"best",
+				"bestAttrId"
+			],
+			[
+				"besta",
+				"bestAttrId"
+			],
+			[
+				"be",
+				"bestAttrName"
+			],
+			[
+				"id",
+				"id3recv"
+			],
+			[
+				"train_",
+				"train_label"
+			],
+			[
+				"att",
+				"attributes"
+			],
+			[
+				"H",
+				"Hatt2"
+			],
+			[
+				"Hatt",
+				"Hatt2"
+			],
+			[
+				"th",
+				"thresholds"
+			],
+			[
+				"M",
+				"MinkowskiMeasure"
+			],
+			[
+				"manh",
+				"ManhattanMeasure"
+			],
+			[
+				"mins",
+				"MinkowskiMeasure"
+			],
+			[
+				"man",
+				"ManhattanMeasure"
+			],
+			[
+				"Pre",
+				"preprocessing"
+			],
+			[
+				"pre",
+				"preprocessing"
+			],
+			[
+				"valid",
+				"valid_data"
+			],
+			[
+				"g",
+				"groups"
+			],
+			[
+				"so",
+				"sorted_np"
+			],
+			[
+				"blo",
+				"block_count"
+			],
+			[
+				"wh",
+				"whole"
+			],
+			[
+				"num",
+				"num_features"
+			],
+			[
+				"valid_f",
+				"valid_Fscore"
+			],
+			[
+				"vali",
+				"valid_precision"
+			],
+			[
+				"TP",
+				"valid_TP"
+			],
+			[
+				"valid_da",
+				"valid_data_np"
+			],
+			[
+				"np",
+				"np_minmax"
+			],
+			[
+				"colo",
+				"colorsMap"
+			],
+			[
+				"z_sc",
+				"z_scores_np"
+			],
+			[
+				"line",
+				"line_count"
+			],
+			[
+				"G",
+				"graph"
+			],
+			[
+				"dst",
+				"dstVal"
+			],
+			[
+				"Src",
+				"srcVal"
+			],
+			[
+				"Pes",
+				"PersonEduDegrees"
+			],
+			[
+				"dept",
+				"depts2"
+			],
+			[
+				"TupleT",
+				"TupleTableSlot"
+			],
+			[
+				"execc",
+				"ExecCopySlot"
+			],
+			[
+				"cacheGeneric",
+				"CacheGenericState"
+			],
+			[
+				"firsT",
+				"firstTuple"
+			],
+			[
+				"return",
+				"returnedTuples"
+			],
+			[
+				"outer",
+				"outerslot"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "urls.py",
+			"settings":
+			{
+				"buffer_size": 950,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "settings.py",
+			"settings":
+			{
+				"buffer_size": 3146,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/princess/Documents/PhD/thesis/code/djangoProject/discoverysite/demo/templates/demo/searchForm.html",
+			"settings":
+			{
+				"buffer_size": 6643,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/princess/Documents/PhD/thesis/code/sigma.js-master/examples/mydemo.html",
+			"settings":
+			{
+				"buffer_size": 5822,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+	],
+	"file_history":
+	[
+		"/Users/princess/Documents/PhD/Courses/CS565/Questions in Coq.txt",
+		"/Users/princess/Documents/PhD/thesis/code/other/testingPlotGraphNetwork.zip",
+		"/Users/princess/Documents/PhD/thesis/code/djangoProject/discoverysite/demo/templates/demo/search.html",
+		"/Users/princess/Documents/FCOI/email_mp_inv.py",
+		"/Users/princess/Documents/PhD/thesis/code/web2py/applications/Hello/modules/logAmira.txt",
+		"/Users/princess/Documents/PhD/thesis/code/untitled.sh",
+		"/Users/princess/Documents/PhD/thesis/code/aurum-datadiscovery-master/docs/quick_start.md",
+		"/Users/princess/Documents/PhD/thesis/code/aurum-datadiscovery-master/ddprofiler/src/main/resources/csvtemplate.yml",
+		"/Users/princess/Documents/PhD/thesis/code/aurum-datadiscovery-master/ddprofiler/src/main/resources/template.yml",
+		"/Users/princess/Documents/PhD/thesis/code/aurum-datadiscovery-master/demo.py",
+		"/Users/princess/Documents/PhD/thesis/code/aurum-datadiscovery-master/DoD/ui/node_modules/core-js/client/core.js",
+		"/Users/princess/Documents/PhD/thesis/code/aurum-datadiscovery-master/ontomatch/curl -X GET \"localhost:9200:text:_search?pretty\" -",
+		"/Users/princess/Downloads/test.cpp",
+		"/Users/princess/Downloads/import_training.py",
+		"/Users/princess/Documents/PhD/thesis/code/aurum-datadiscovery-master/ddprofiler/src/main/java/analysis/FloatDataConsumer.java",
+		"/Users/princess/Documents/PhD/Courses/CS503-Operating System/Labs/questions.txt",
+		"/Users/princess/Documents/PhD/Courses/CS503-Operating System/lectures/Notes",
+		"/Users/princess/Documents/PhD/Courses/CS503-Operating System/lectures/Reader-Writer Problem Ex.c",
+		"/Users/princess/Documents/PhD/Courses/CS503-Operating System/lectures/Producer-Consumer problem Ex.c",
+		"/Users/princess/Documents/PhD/thesis/code/dataDiscoveryDemo/webDemo/data.csv",
+		"/Users/princess/Documents/PhD/thesis/code/dataDiscoveryDemo/webDemo/master2.html",
+		"/Users/princess/Documents/PhD/thesis/code/dataDiscoveryDemo/webDemo/master3.html",
+		"/Users/princess/Documents/PhD/thesis/code/dataDiscoveryDemo/webDemo/files.php",
+		"/Users/princess/Documents/PhD/thesis/code/t.py",
+		"/Users/princess/Documents/PhD/thesis/code/ckanExample5.py",
+		"/Users/princess/Documents/PhD/Courses/CS503-Operating System/Labs/others/test.c",
+		"/Users/princess/Downloads/ptRRSFID.html",
+		"/Users/princess/Documents/PhD/thesis/code/ckanExample4.py",
+		"/Users/princess/Documents/PhD/thesis/code/ckanExample3.py",
+		"/Users/princess/Documents/PhD/thesis/code/ckanExample2.py",
+		"/Users/princess/Documents/PhD/thesis/code/ckanExample.py",
+		"/Users/princess/Documents/PhD/thesis/code/t.pu",
+		"/Users/princess/Documents/PhD/Courses/CS503-Operating System/Labs/Xinu/xinu-cs503-spring2019/shell/xsh_kill.c",
+		"/Users/princess/Documents/PhD/Courses/CS503-Operating System/Labs/Xinu/xinu-cs503-spring2019/shell/xsh_ps.c",
+		"/Users/princess/Documents/PhD/Courses/CS503-Operating System/Labs/Xinu/xinu-cs503-spring2019/shell/xsh_ping.c",
+		"/Users/princess/Documents/PhD/Courses/CS503-Operating System/Labs/Xinu/xinu-cs503-spring2019/shell/xsh_sleep.c",
+		"/Users/princess/Documents/PhD/Courses/CS503-Operating System/Labs/Xinu/xinu-cs503-spring2019/shell/xsh_arp.c",
+		"/Users/princess/Documents/PhD/Courses/CS503-Operating System/Labs/Xinu/xinu-cs503-spring2019/shell/xsh_exit.c",
+		"/Users/princess/Documents/PhD/Courses/CS503-Operating System/Labs/Xinu/xinu-cs503-spring2019/shell/shell.c",
+		"/Users/princess/Documents/PhD/Courses/CS503-Operating System/Labs/Xinu/xinu-cs503-spring2019/system/kprintf.c",
+		"/Users/princess/Documents/PhD/Courses/CS503-Operating System/Labs/Xinu/xinu-cs503-spring2019/include/xinu.h",
+		"/Users/princess/Documents/PhD/Courses/CS503-Operating System/Labs/Xinu/xinu-cs503-spring2019/include/prototypes.h",
+		"/Users/princess/Documents/PhD/Courses/CS503-Operating System/Labs/Xinu/xinu-cs503-spring2019/system/main.c",
+		"/Users/princess/Documents/PhD/Courses/CS503-Operating System/Labs/Xinu/xinu-cs503-spring2019/system/putc.c",
+		"/Users/princess/Documents/PhD/Courses/CS503-Operating System/Labs/Xinu/xinu-cs503-spring2019/system/create.c",
+		"/Users/princess/Documents/PhD/Courses/CS503-Operating System/Labs/Xinu/xinu-cs503-spring2019/shell/xsh_cat.c",
+		"/Users/princess/Documents/PhD/Courses/CS503-Operating System/Labs/lab0/shell commands.txt",
+		"/Users/princess/Documents/PhD/Courses/CS503-Operating System/Labs/Xinu/xinu-cs503-spring2019/shell/xsh_clear.c",
+		"/Users/princess/Documents/PhD/Courses/CS503-Operating System/Labs/Xinu/xinu-cs503-spring2019/shell/xsh_date.c",
+		"/Users/princess/Documents/PhD/Courses/CS503-Operating System/Labs/Xinu/xinu-cs503-spring2019/shell/xsh_help.c",
+		"/Users/princess/Documents/PhD/Courses/CS587-StatisticsMachineLearning/lecture/questions.txt",
+		"/Users/princess/Downloads/test.html",
+		"/Users/princess/Documents/PhD/Courses/CS587-StatisticsMachineLearning/HW/hw4/decisiontree.py",
+		"/Users/princess/Documents/PhD/Courses/CS587-StatisticsMachineLearning/HW/hw4/dct3.py",
+		"/Users/princess/Documents/PhD/Courses/CS587-StatisticsMachineLearning/HW/hw2/sol/vanilla_perceptron.py",
+		"/Users/princess/Documents/PhD/Courses/CS587-StatisticsMachineLearning/HW/hw3-2/sol/GD.py",
+		"/Users/princess/Documents/PhD/Courses/CS587-StatisticsMachineLearning/HW/hw3-2/sol/GD-tuning.py",
+		"/Users/princess/Documents/PhD/Courses/CS587-StatisticsMachineLearning/HW/hw3-2/sol/SGD1.py",
+		"/Users/princess/Documents/PhD/Courses/CS587-StatisticsMachineLearning/HW/hw3-2/sol/test.py",
+		"/Users/princess/Documents/PhD/Courses/CS587-StatisticsMachineLearning/HW/hw3-2/sol/test2.py",
+		"/Users/princess/Documents/PhD/Courses/CS587-StatisticsMachineLearning/HW/hw3-2/sol/GD4.py",
+		"/Users/princess/Documents/PhD/Courses/CS587-StatisticsMachineLearning/HW/hw3-2/sol/GD3.py",
+		"/Users/princess/Documents/PhD/Courses/CS587-StatisticsMachineLearning/HW/hw3-2/sol/SGD.py",
+		"/Users/princess/Documents/PhD/Courses/CS587-StatisticsMachineLearning/HW/hw3-2/sol/GD2.py",
+		"/Users/princess/Documents/PhD/Courses/CS587-StatisticsMachineLearning/HW/hw2/sol/test2.py",
+		"/Users/princess/Documents/PhD/Courses/CS580-Algorithms/HW/HW3/p1.py",
+		"/Users/princess/Documents/FCOI/ptFinancialInterestForm.html",
+		"/Users/princess/Documents/PhD/Courses/CS580-Algorithms/HW/HW3/p2.py",
+		"/Users/princess/Documents/PhD/Courses/CS580-Algorithms/HW/HW3/p3.py",
+		"/Users/princess/Documents/PhD/Courses/CS587-StatisticsMachineLearning/HW/hw1/sol/knn_tunning.py",
+		"/Users/princess/Documents/PhD/Courses/CS587-StatisticsMachineLearning/HW/hw2/sol/average_winnow.py",
+		"/Users/princess/Documents/PhD/Courses/CS587-StatisticsMachineLearning/HW/hw2/sol/average_perceptron.py",
+		"/Users/princess/Documents/PhD/Courses/CS587-StatisticsMachineLearning/HW/hw2/sol/winnow.py",
+		"/Users/princess/Documents/PhD/Courses/CS587-StatisticsMachineLearning/HW/hw1/sol/dct4.py",
+		"/Users/princess/Documents/PhD/Courses/CS587-StatisticsMachineLearning/HW/hw2/sol/vanillaPerceptron-thetaNeg.py",
+		"/Users/princess/Documents/PhD/Courses/CS587-StatisticsMachineLearning/HW/hw2/sol/vanillaPerceptron.py",
+		"/Users/princess/Documents/PhD/Courses/CS587-StatisticsMachineLearning/HW/hw2/sol/vanillaPerceptron2.py",
+		"/Users/princess/Documents/PhD/Courses/CS587-StatisticsMachineLearning/HW/hw2/sol/averagePerceptron.py",
+		"/Users/princess/Documents/PhD/Courses/CS587-StatisticsMachineLearning/HW/hw2/sol/averagePerceptron2.py",
+		"/Users/princess/Documents/PhD/Courses/CS587-StatisticsMachineLearning/HW/hw2/sol/test.py",
+		"/Users/princess/Documents/PhD/Courses/CS587-StatisticsMachineLearning/HW/hw2/sol/winnow4.py",
+		"/Users/princess/Documents/PhD/Courses/CS587-StatisticsMachineLearning/HW/hw2/sol/winnow5.py",
+		"/Users/princess/Documents/PhD/Courses/CS587-StatisticsMachineLearning/HW/hw2/sol/winnow3.py",
+		"/Users/princess/Documents/PhD/Courses/CS587-StatisticsMachineLearning/HW/hw2/sol/winnow2.py",
+		"/Users/princess/Documents/PhD/Courses/CS587-StatisticsMachineLearning/HW/hw2/sol/vanillaPerceptron3.py",
+		"/Users/princess/Documents/FCOI/ptMpFormMacro.html",
+		"/Users/princess/Documents/FCOI/ptMpDetails.html",
+		"/Users/princess/Documents/PhD/Courses/CS587-StatisticsMachineLearning/HW/hw1/sol/hw1.py",
+		"/Users/princess/Documents/PhD/Courses/CS587-StatisticsMachineLearning/HW/hw1/sol/dct3.py",
+		"/Users/princess/Documents/PhD/Courses/CS587-StatisticsMachineLearning/HW/hw1/sol/helper.py",
+		"/Users/princess/Documents/PhD/Courses/CS587-StatisticsMachineLearning/HW/hw1/sol/dct.py",
+		"/Users/princess/Documents/PhD/Courses/CS587-StatisticsMachineLearning/HW/hw1/sol/dct2.py",
+		"/Users/princess/Documents/PhD/Courses/CS587-StatisticsMachineLearning/HW/hw1/sol/id3-2.py",
+		"/Users/princess/Documents/PhD/Courses/CS587-StatisticsMachineLearning/HW/hw1/sol/id3-3.py",
+		"/Users/princess/Documents/PhD/Courses/CS587-StatisticsMachineLearning/HW/hw1/sol/test.cfg",
+		"/Users/princess/Documents/PhD/Courses/CS587-StatisticsMachineLearning/HW/hw1/sol/test.py",
+		"/Users/princess/Documents/PhD/Courses/CS587-StatisticsMachineLearning/HW/hw1/sol/test.txt",
+		"/Users/princess/Documents/PhD/Courses/CS587-StatisticsMachineLearning/HW/hw1/sol/id3.py",
+		"/Users/princess/Documents/PhD/Courses/CS587-StatisticsMachineLearning/HW/hw1/sol/dct-pruning.py",
+		"/Users/princess/Documents/PhD/Courses/CS587-StatisticsMachineLearning/HW/hw1/sol/knn_tunning_3.py",
+		"/Users/princess/Documents/PhD/Courses/CS587-StatisticsMachineLearning/HW/hw1/sol/dct5.py",
+		"/Users/princess/Documents/PhD/Courses/CS587-StatisticsMachineLearning/HW/hw1/sol/report/decisiontree.py",
+		"/Users/princess/Documents/PhD/Courses/CS587-StatisticsMachineLearning/HW/hw1/sol/report/dct4.py",
+		"/Users/princess/Documents/PhD/Courses/CS587-StatisticsMachineLearning/HW/hw1/sol/knn_tunning_2.py",
+		"/Users/princess/Documents/PhD/Courses/CS587-StatisticsMachineLearning/HW/hw1/sol/knn2.py",
+		"/Users/princess/Documents/Masters/code/kNNContribution/plotter/plotter-quad-HPC-T.py",
+		"/Users/princess/Documents/PhD/Courses/CS587-StatisticsMachineLearning/HW/hw1/sol/knn.py",
+		"/Users/princess/Documents/PhD/Courses/CS587-StatisticsMachineLearning/HW/hw0/sol/hw0.py",
+		"/Users/princess/Documents/PhD/Courses/CS587-StatisticsMachineLearning/HW/hw0/sol/hw00.py",
+		"/Users/princess/Documents/PhD/Courses/CS587-StatisticsMachineLearning/HW/hw1/sol/untitled.py",
+		"/Users/princess/Documents/PhD/Courses/CS587-StatisticsMachineLearning/HW/hw1/sol/4;2",
+		"/Users/princess/Documents/PhD/Courses/CS580-Algorithms/HW/Hw1/HW 1.txt",
+		"/Users/princess/Documents/FCOI/email_om_mp.py",
+		"/Users/princess/Documents/PhD/Courses/CS580-Algorithms/HW/Hw1/test.c",
+		"/Users/princess/Documents/PhD/Courses/CS580-Algorithms/HW/Hw1/hw1.tex",
+		"/Users/princess/Documents/PhD/Courses/CS587-StatisticsMachineLearning/HW/Notes for developing in HW.txt",
+		"/Users/princess/Documents/PhD/Courses/CS580-Algorithms/HW/Hw1/TEST.C",
+		"/Users/princess/Downloads/untitled.xml",
+		"/Users/princess/Downloads/AjaxTable.js",
+		"/Users/princess/Downloads/ptManagementPlanLanding.html",
+		"/Users/princess/Downloads/getAllDeptsNames.py",
+		"/Users/princess/Documents/Masters/code/kNNContribution/scripts/test1_PreF_Join_Q4.sh",
+		"/Users/princess/Documents/Masters/code/kNNContribution/scripts/test1_PreF_Join_OIS_HOOK_Q4.sh",
+		"/Users/princess/Documents/Masters/code/kNNContribution/scripts/test1_PoF_OIS_HOOK_Q2.sh",
+		"/Users/princess/output14.txt",
+		"/Users/princess/logfile1.txt",
+		"/Users/princess/output12.txt",
+		"/Users/princess/output11.txt"
+	],
+	"find":
+	{
+		"height": 42.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "urls.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 950,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								914,
+								914
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "settings.py",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 3146,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2948,
+								2948
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1817.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/Users/princess/Documents/PhD/thesis/code/djangoProject/discoverysite/demo/templates/demo/searchForm.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6643,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								627,
+								627
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/Users/princess/Documents/PhD/thesis/code/sigma.js-master/examples/mydemo.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5822,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3556,
+								5822
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 989.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 29.0
+	},
+	"input":
+	{
+		"height": 41.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 100.0
+	},
+	"pinned_build_system": "",
+	"project": "discoverysite.sublime-project",
+	"replace":
+	{
+		"height": 54.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 293.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
