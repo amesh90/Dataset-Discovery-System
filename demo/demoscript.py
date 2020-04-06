@@ -13,7 +13,7 @@ from api.apiutils import Relation
 from mock import MagicMock, patch
 from ddapi import API
 from modelstore.elasticstore import StoreHandler
-from knowledgerepr.fieldnetwork import deserialize_network
+from knowledgerepr.fieldnetwork import deserialize_network, snapshot_subgraph, expand, updateserializednetwork
 
 from collections import defaultdict
 from collections import OrderedDict
@@ -207,23 +207,67 @@ def main():
                 print("\n")
 
 
+def generatejson(G):
+    
+    print(G)
 
-def snapshotOfGraph(api, resultMap, drs):
+    return G
+
+def snapshotOfGraph(api, resultMap, drs, network, tmppath):
     if debug == 1:
         print('\nSnapshotOfGraph ..... Begin')
         print(resultMap)
-    resultMapWithProv = drs.__dict__()
+    
+    list_of_nodes = []
+    for nid in resultMap:
+        list_of_nodes.append(nid)
+    SG = snapshot_subgraph(network, list_of_nodes, tmppath)
+    
+
+    return generatejson(SG)
+
+def update_serialized_network(model:str):
     if debug == 1:
-        print(str(resultMapWithProv))
-        # print(resultMapWithProv['sources'])
+        print ('testmode'+model+' is loading!')
+    if '1' in model:
+        path = '/Users/princess/Documents/PhD/thesis/code/aurum-datadiscovery-master/mytest/testmodel1/'
+    elif '2' in model:
+        path = '/Users/princess/Documents/PhD/thesis/code/aurum-datadiscovery-master/mytest/testmodel2/'
+    elif '3' in model:
+        path = '/Users/princess/Documents/PhD/thesis/code/aurum-datadiscovery-master/mytest/testmodel3/'
+    
+    network = deserialize_network(path)    
+
+    return updateserializednetwork(network, path)
+
+# ===========
+# Expand existing graph with neighbors
+# ===========
+def expand_with_neighbors(model:str, tmppath:str):
+    #========================================== 
+    # initialization
+    #========================================== 
+    if debug == 1:
+        print ('testmode'+model+' is loading!')
+    if '1' in model:
+        path = '/Users/princess/Documents/PhD/thesis/code/aurum-datadiscovery-master/mytest/testmodel1/'
+    elif '2' in model:
+        path = '/Users/princess/Documents/PhD/thesis/code/aurum-datadiscovery-master/mytest/testmodel2/'
+    elif '3' in model:
+        path = '/Users/princess/Documents/PhD/thesis/code/aurum-datadiscovery-master/mytest/testmodel3/'
+    elif '4' in model:
+        path = '/Users/princess/Documents/PhD/thesis/code/aurum-datadiscovery-master/mytest/testmodel4/'
+    
+    
+    # read the updated graph again
+    network = deserialize_network(path) 
+    g_json2 = expand(network, tmppath)
+    return g_json2
 
 # =================
 # Web app demo (return snapshot of the resutl graph)
 # =================
-# =================
-# for the Webapp demo
-# =================
-def dataDicoveryDemo_main(keywords: str, model: str):
+def dataDicoveryDemo_main_graph(keywords: str, model: str, tmppath:str):
     
     #========================================== 
     # initialization
@@ -236,12 +280,21 @@ def dataDicoveryDemo_main(keywords: str, model: str):
         path = '/Users/princess/Documents/PhD/thesis/code/aurum-datadiscovery-master/mytest/testmodel2/'
     elif '3' in model:
         path = '/Users/princess/Documents/PhD/thesis/code/aurum-datadiscovery-master/mytest/testmodel3/'
+    elif '4' in model:
+        path = '/Users/princess/Documents/PhD/thesis/code/aurum-datadiscovery-master/mytest/testmodel4/'
+    
     keywords = keywords.split(',')
 
     if debug == 1:
         print (keywords)
     # ddapi:
-    network = deserialize_network(path)
+    # network = deserialize_network(path)
+
+    # add tables as nodes in the graph
+    # network = update_serialized_network(network, path)
+
+    # read the updated graph again
+    network = deserialize_network(path)    
     api = API(network)
     api.init_store()
 
@@ -355,9 +408,12 @@ def dataDicoveryDemo_main(keywords: str, model: str):
     # -----------
     # create the snapshot of the graph
     # -----------
-    # snapshotOfGraph(api, resultMap, res)
+    g_json = snapshotOfGraph(api, resultMap, res, network, tmppath)
 
-    return resultMap
+    
+    return g_json
+
+
 # =================
 # for the Webapp demo ( Keywords + return list of fields as table )
 # =================
@@ -500,12 +556,13 @@ def dataDicoveryDemo_main(keywords: str, model: str):
 
 if __name__== "__main__":
 
-    #if argumentPassing == 1:
     if len(sys.argv) > 1:
         keywords = str(sys.argv[1])
         dataDicoveryDemo_main(keywords)
-    else:      
-        main()
+    else: 
+        update_serialized_network('3')     
+        # to run the normal main
+        # main()
   
 
 # python run_dod.py --model_path 'mytest/testmodel1/' --list_attributes '' --list_values 'purdue;'

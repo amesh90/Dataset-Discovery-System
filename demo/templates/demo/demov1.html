@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<title>Packt Python Graph</title>
+	<!-- <script type="text/javascript" src="static/js/jqueryv1.11.3/jqueryv1.11.3.min.js"></script> -->
+	<!-- <script type="text/javascript" src="static/js/bootstrapv3.3.5/bootstrap.min.js"></script> -->
+	{% load static %}
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	{% load static %}
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<!-- <script type="text/javascript" src="static/js/Linkurious/sigma.min.js"></script>
+	<script type="text/javascript" src="static/js/Linkurious/plugins/sigma.parsers.gexf.min.js"></script>
+	<script type="text/javascript" src="static/js/Linkurious/plugins/sigma.renderers.customEdgeShapes.min.js"></script>
+	<script type="text/javascript" src="static/js/Linkurious/plugins/sigma.helpers.graph.min.js"></script>
+	<script src="static/js/Linkurious/plugins/sigma.plugins.animate.min.js"></script>
+	<script src="static/js/Linkurious/plugins/sigma.plugins.filter.min.js"></script>
+	<script src="static/js/Linkurious/plugins/sigma.layout.forceLink.min.js"></script>	
+	<script src="static/js/Linkurious/plugins/sigma.plugins.locate.min.js"></script>
+	<script src="static/js/Linkurious/plugins/sigma.renderers.glyphs.min.js"></script>
+	 -->
+	 <!-- START SIGMA IMPORTS -->
+{% load static %}
+<script src="{% static "sigma.js/src/sigma.core.js" %}"></script>
+{% load static %}
+<script src="{% static "sigma.js/src/conrad.js" %}" ></script>
+{% load static %}
+<script src="{% static "sigma.js/src/utils/sigma.utils.js" %}" ></script>
+{% load static %}
+<script src="{% static "sigma.js/src/utils/sigma.polyfills.js" %}" ></script>
+{% load static %}
+<script src="{% static "sigma.js/src/sigma.settings.js" %}" ></script>
+{% load static %}
+<script src="{% static "sigma.js/src/classes/sigma.classes.dispatcher.js" %}" ></script>
+{% load static %}
+<script src="{% static "sigma.js/src/classes/sigma.classes.configurable.js" %}" ></script>
+{% load static %}
+<script src="{% static "sigma.js/src/classes/sigma.classes.graph.js" %}" ></script>
+{% load static %}
+<script src="{% static "sigma.js/src/classes/sigma.classes.camera.js" %}" ></script>
+{% load static %}
+<script src="{% static "sigma.js/src/classes/sigma.classes.quad.js" %}" ></script>
+{% load static %}
+<script src="{% static "sigma.js/src/classes/sigma.classes.edgequad.js" %}" ></script>
+<script src="{% static "sigma.js/src/captors/sigma.captors.mouse.js" %}" ></script>
+<script src="{% static "sigma.js/src/captors/sigma.captors.touch.js" %}" ></script>
+<script src="{% static "sigma.js/src/renderers/sigma.renderers.canvas.js" %}" ></script>
+<script src="{% static "sigma.js/src/renderers/sigma.renderers.webgl.js" %}" ></script>
+<script src="{% static "sigma.js/src/renderers/sigma.renderers.svg.js" %}" ></script>
+<script src="{% static "sigma.js/src/renderers/sigma.renderers.def.js" %}" ></script>
+<script src="{% static "sigma.js/src/renderers/webgl/sigma.webgl.nodes.def.js" %}" ></script>
+<script src="{% static "sigma.js/src/renderers/webgl/sigma.webgl.nodes.fast.js" %}" ></script>
+<script src="{% static "sigma.js/src/renderers/webgl/sigma.webgl.edges.def.js" %}" ></script>
+<script src="{% static "sigma.js/src/renderers/webgl/sigma.webgl.edges.fast.js" %}" ></script>
+<script src="{% static "sigma.js/src/renderers/webgl/sigma.webgl.edges.arrow.js" %}" ></script>
+<script src="{% static "sigma.js/src/renderers/canvas/sigma.canvas.labels.def.js" %}" ></script>
+<script src="{% static "sigma.js/src/renderers/canvas/sigma.canvas.hovers.def.js" %}" ></script>
+<script src="{% static "sigma.js/src/renderers/canvas/sigma.canvas.nodes.def.js" %}" ></script>
+<script src="{% static "sigma.js/src/renderers/canvas/sigma.canvas.edges.def.js" %}" ></script>
+<script src="{% static "sigma.js/src/renderers/canvas/sigma.canvas.edges.curve.js" %}" ></script>
+<script src="{% static "sigma.js/src/renderers/canvas/sigma.canvas.edges.arrow.js" %}" ></script>
+<script src="{% static "sigma.js/src/renderers/canvas/sigma.canvas.edges.curvedArrow.js" %}" ></script>
+<script src="{% static "sigma.js/src/renderers/canvas/sigma.canvas.edgehovers.def.js" %}" ></script>
+<script src="{% static "sigma.js/src/renderers/canvas/sigma.canvas.edgehovers.curve.js" %}" ></script>
+<script src="{% static "sigma.js/src/renderers/canvas/sigma.canvas.edgehovers.arrow.js" %}" ></script>
+<script src="{% static "sigma.js/src/renderers/canvas/sigma.canvas.edgehovers.curvedArrow.js" %}" ></script>
+<script src="{% static "sigma.js/src/renderers/canvas/sigma.canvas.extremities.def.js" %}" ></script>
+<script src="{% static "sigma.js/src/renderers/svg/sigma.svg.utils.js" %}" ></script>
+<script src="{% static "sigma.js/src/renderers/svg/sigma.svg.nodes.def.js" %}" ></script>
+<script src="{% static "sigma.js/src/renderers/svg/sigma.svg.edges.def.js" %}" ></script>
+<script src="{% static "sigma.js/src/renderers/svg/sigma.svg.edges.curve.js" %}" ></script>
+<script src="{% static "sigma.js/src/renderers/svg/sigma.svg.labels.def.js" %}" ></script>
+<script src="{% static "sigma.js/src/renderers/svg/sigma.svg.hovers.def.js" %}" ></script>
+<script src="{% static "sigma.js/src/middlewares/sigma.middlewares.rescale.js" %}" ></script>
+<script src="{% static "sigma.js/src/middlewares/sigma.middlewares.copy.js" %}" ></script>
+<script src="{% static "sigma.js/src/misc/sigma.misc.animation.js" %}" ></script>
+<script src="{% static "sigma.js/src/misc/sigma.misc.bindEvents.js" %}" ></script>
+<script src="{% static "sigma.js/src/misc/sigma.misc.bindDOMEvents.js" %}" ></script>
+<script src="{% static "sigma.js/src/misc/sigma.misc.drawHovers.js" %}" ></script>
+<script src="{% static "sigma.js/plugins/sigma.parsers.json/sigma.parsers.json.js" %}" ></script>
+<script src="{% static "sigma.js/build/plugins/sigma.layout.forceAtlas2.min.js" %}" ></script>
+
+
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  
+	 <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"> -->
+	<style type="text/css">
+	  #container {
+		max-width: 1500px;
+		height: 850px;
+		margin: auto;
+		background-color: #E5E5E5;
+	  }
+
+	.hidden {
+	  display: none;
+	  visibility: hidden;
+	}    
+	</style>
+</head>
+<body>
+
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h3 class="modal-title" id="myModalLabel">Help!!</h3>
+      </div>
+      <div class="modal-body">
+       	
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- we force the loading of the font awesome -->
+  <i class="fa fa-camera-retro fa-1x" style="color: rgba(0,0,0,0);"></i>
+	<div class="container">
+
+	<!-- <div class="row-fluid"><a href="https://www.packtpub.com/packt/offers/free-learning" target="new"><img class="img-responsive" src="static/img/Chart_Banner_FL.png"/></a></div> -->
+	<h1 > Dataset Discovery </h1>
+		
+	<div class="row">
+		
+		<div class="col-md-12"> <!--<div class="col-md-9"> -->
+		
+		<!-- <form action="{% url 'demo:search' %}" method="post"> {% csrf_token %} -->
+		<!-- <form action="" method="post" id="searchform">  -->
+		<input id="keywordsSearchForm" type="text" name="keywords" value=" "/>
+		<button onclick="showgraph()">Search</button>
+		<!-- </form> -->
+
+		<br />
+		 <span>
+		 	<button onclick="expand()">Expand</button>
+			<button>Retrain</button>
+		</span>
+		
+		</div>
+	</div>
+	<br /><br /><br />
+		<div class="row">
+			<div class="col-md-12" id="container-div" > <!-- <div class="col-md-9"> --> 
+
+				<div id="container"></div>
+				<div id="ZoomDiv" class="col-md-6 col-md-offset-5">
+					<button  id="zoomIn" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span></button>
+					<button  id="zoomOut" class="btn btn-default"><span class="glyphicon glyphicon-minus"></span></button>
+					<button  id="zoomDef" class="btn btn-default"><span class="glyphicon glyphicon-resize-full"></span></button>
+				</div>
+			
+			</div>
+			<div class="col-md-3">
+				<div id="control-pane">
+					<h2>Panel</h2>
+					<div class="form-group">
+						
+				  		<!-- <label for="min-degree">Minimum Degree -<span id="min-degree-val">0</span></label>
+				  			0 <input class="form-control" id="min-degree" type="range" min="0" max="0" value="0"> <span id="max-degree-value">0</span><br>
+				  		<label for"min-edge">Minimum Edge Weight -<span id="min-edge-val">0</span></label>
+				  			0 <input class="form-control" id="min-edge" step="0.01" type="range" min="0" max="0" value="0"> <span id="max-edge-value">0</span><br>
+				  		<label for="node-type">Node Type</label>
+						<select class="form-control" id="node-type">
+							<option value="" selected>All Types</option>
+			  			</select>
+				  		<label for="node-category">Node Category</label>
+						<select class="form-control" id="node-category">
+							<option value="" selected>All Categories</option>
+			  			</select> -->
+				  		<!-- <label for="node-search">Text Search</label>
+				  		<input class="form-control" id="node-search" type="text"> -->
+					</div>	
+					<!-- <span class="line"></span>
+					<div class="btn-group" role="group">
+				  		<button id="reset-btn" class="btn btn-primary">Reset filters</button>
+				  		<button id="layout" class="btn btn-warning">Turn ForceLink Layout on/off
+					</button>
+					</div> -->
+					
+			  	</div>
+			  	<div id="infoPanel">
+			  	</div>	
+
+
+
+			</div>
+		</div>
+	</div>
+
+</div>
+	
+
+<script type="text/javascript">
+$('#myModal').modal({show:false});
+
+
+
+{% block jquery %}
+ function showgraph()
+ {
+
+	 $.ajax({
+	 	type:"POST",
+	 	url: "../search/api/graphdata",
+	 	data: { keywords: document.getElementById("keywordsSearchForm").value}, 
+
+	 	success: function(returneddata){
+	 		console.log("Success .... ")
+	 		console.log(returneddata)
+	 		gdata = returneddata;
+
+	 		// clear the graph to load the new one
+	 		var g = document.getElementById('container'); //document.querySelector('#graph');
+		    var p = g.parentNode;
+		    p.removeChild(g);
+		    var c = document.createElement('div');
+		    c.setAttribute('id', 'container');
+		    p.appendChild(c);
+
+	 		s = new sigma({
+			  graph: returneddata,
+			  container: 'container',
+				renderer: {
+					container: document.getElementById('container'),
+					type: 'canvas'
+				},
+				settings: {
+					minNodeSize: 1,
+					maxNodeSize: 14,
+					minEdgeSize:0.1,
+					maxEdgeSize:0.5,
+					verbose:true,
+					labelThreshold:10,  
+					defaultEdgeType:"curve",
+					defaultLabelColor: "#000",
+					defaultLabelSize: 14,
+					defaultLabelBGColor: "#ddd",
+					defaultHoverLabelBGColor: "#002147",
+					defaultLabelHoverColor: "#fff",
+				    	zoomMin: 0.05,
+				    	zoomMax: 1,
+				      glyphScale: 0.7,
+				      glyphFillColor: '#666',
+				      glyphTextColor: 'white',
+				      glyphStrokeColor: 'transparent',
+				      glyphFont: 'FontAwesome',
+				      glyphFontStyle: 'normal',
+				      glyphTextThreshold: 6,
+				      glyphThreshold: 3	    	
+
+				}
+			});
+
+	 		s.refresh();
+
+	 		var i,
+                    nodes = s.graph.nodes(),
+                    len = nodes.length;
+
+            for (i = 0; i < len; i++) {
+                nodes[i].x = Math.random(); //*nodes[i].id;
+                nodes[i].y = Math.random();//*(nodes[i].id/2);
+                nodes[i].size = s.graph.degree(nodes[i].id);
+                nodes[i].color = nodes[i].center ? '#333' : '#666';
+                console.log(nodes[i].x + ',' + nodes[i].y);
+            }
+
+            // Refresh the display:
+            s.refresh();
+
+            // ForceAtlas Layout
+            // s.startForceAtlas2({startingIterations : 0, iterationsPerRender  : 0});
+            // window.setTimeout(function() {s.killForceAtlas2()}, 10000);
+
+
+	 	},
+	 	error: function(error_data){
+	 		console.log("error")
+	 		console.log(error_data)
+	 	}
+	 })
+
+	 console.log("gdata After ...");
+	 
+ }
+
+
+ function expand()
+ {
+
+	 $.ajax({
+	 	type:"POST",
+	 	url: "../search/api/expand",
+	 	//data: { keywords: document.getElementById("keywordsSearchForm").value}, 
+
+	 	success: function(returneddata){
+	 		console.log("expand Success .... ")
+	 		console.log(returneddata)
+	 		gdata = returneddata;
+
+	 		// clear the graph to load the new one
+	 		var g = document.getElementById('container'); //document.querySelector('#graph');
+		    var p = g.parentNode;
+		    p.removeChild(g);
+		    var c = document.createElement('div');
+		    c.setAttribute('id', 'container');
+		    p.appendChild(c);
+
+	 		s = new sigma({
+			  graph: returneddata,
+			  container: 'container',
+				renderer: {
+					container: document.getElementById('container'),
+					type: 'canvas'
+				},
+				settings: {
+					minNodeSize: 1,
+					maxNodeSize: 14,
+					minEdgeSize:0.1,
+					maxEdgeSize:0.5,
+					verbose:true,
+					labelThreshold:10,  
+					defaultEdgeType:"curve",
+					defaultLabelColor: "#000",
+					defaultLabelSize: 14,
+					defaultLabelBGColor: "#ddd",
+					defaultHoverLabelBGColor: "#002147",
+					defaultLabelHoverColor: "#fff",
+				    	zoomMin: 0.05,
+				    	zoomMax: 1,
+				      glyphScale: 0.7,
+				      glyphFillColor: '#666',
+				      glyphTextColor: 'white',
+				      glyphStrokeColor: 'transparent',
+				      glyphFont: 'FontAwesome',
+				      glyphFontStyle: 'normal',
+				      glyphTextThreshold: 6,
+				      glyphThreshold: 3	    	
+
+				}
+			});
+
+	 		s.refresh();
+
+	 		var i,
+                    nodes = s.graph.nodes(),
+                    len = nodes.length;
+
+            for (i = 0; i < len; i++) {
+                nodes[i].x = Math.random(); //*nodes[i].id;
+                nodes[i].y = Math.random();//*(nodes[i].id/2);
+
+                nodes[i].size = s.graph.degree(nodes[i].id);
+                
+            	if (nodes[i].attributes.fieldname == nodes[i].attributes.tablename ){
+                	nodes[i].color = '#F93F17' ;
+            	}
+            	else {
+            		nodes[i].color = '#666';
+            	}
+                console.log(nodes[i].istable );
+                console.log(nodes[i].attributes.fieldname);
+                console.log(nodes[i].attributes.tablename);
+            }
+
+            // Refresh the display:
+            s.refresh();
+
+            // ForceAtlas Layout
+            // s.startForceAtlas2({startingIterations : 0, iterationsPerRender  : 0});
+            // window.setTimeout(function() {s.killForceAtlas2()}, 10000);
+
+
+	 	},
+	 	error: function(error_data){
+	 		console.log("error")
+	 		console.log(error_data)
+	 	}
+	 })
+
+	 console.log("gdata After ...");
+	 
+ }
+
+ {% endblock %}
+
+
+
+
+s= new sigma({
+	container: 'g-container',
+	renderer: {
+		container: document.getElementById('container'),
+		type: 'canvas'
+	},
+	settings: {
+		minNodeSize: 1,
+		maxNodeSize: 14,
+		minEdgeSize:0.1,
+		maxEdgeSize:0.5,
+		verbose:true,
+		labelThreshold:10,  
+		defaultEdgeType:"curve",
+		defaultLabelColor: "#000",
+		defaultLabelSize: 14,
+		defaultLabelBGColor: "#ddd",
+		defaultHoverLabelBGColor: "#002147",
+		defaultLabelHoverColor: "#fff",
+	    	zoomMin: 0.05,
+	    	zoomMax: 1,
+	      glyphScale: 0.7,
+	      glyphFillColor: '#666',
+	      glyphTextColor: 'white',
+	      glyphStrokeColor: 'transparent',
+	      glyphFont: 'FontAwesome',
+	      glyphFontStyle: 'normal',
+	      glyphTextThreshold: 6,
+	      glyphThreshold: 3	    	
+
+	}
+});
+
+// sigma.parsers.gexf(
+// 	'static/data/Graph1.gexf',
+// 	s,
+// 	function(s) {
+// 	// Initialize the Filter API
+// 	filter = sigma.plugins.filter(s);
+// 	$.getJSON('static/data/MetaData.json',
+// 		function (data){
+// 			var icons = {
+// 				'books':'\uF02d',
+// 				'videos':'\uF03d',
+// 				'blog':'\uF0f6',
+// 				'topic':'\uF16c',
+// 				'techprimer':'\uF0f6'
+// 			}
+// 			s.graph.nodes().forEach(function (n){
+// 				for (key in data[n.id]) {
+// 					n.attributes[key]=data[n.id][key];
+					
+// 				};
+// 				n.glyphs = [{
+// 					position:'top-left',
+// 					content:icons[n.attributes['node type']],
+// 				}];
+// 			})
+// 		updatePane(s.graph, filter);	
+// 		}
+// 	);
+// 	function applyMinDegreeFilter(e) {
+// 			var v = e.target.value;
+// 			$('#min-degree-val').textContent = v;
+// 			filter
+// 			.undo('min-degree')
+// 			.nodesBy(
+// 				function(n, options) {
+// 					return this.graph.degree(n.id) >= options.minDegreeVal;
+// 				},{
+// 					minDegreeVal: +v
+// 				},
+// 				'min-degree'
+// 			)
+// 			.apply();
+// 	};
+// 	function applyMinEdgeFilter(e) {
+// 			var v = e.target.value;
+// 			$('#min-edge-val').textContent = v;
+// 			filter
+// 			.undo('min-edge')
+// 			.edgesBy(
+// 				function(n,options){
+// 						return n.weight > options.weight	
+					
+// 				},{
+// 					weight: +v
+// 				},
+// 				'min-edge'
+// 			)
+// 			.apply();
+// 	};	
+// 	function applyTypeFilter(e) {
+// 		var c = e.target[e.target.selectedIndex].value,
+// 			nids = [];
+// 		filter
+// 		.undo('node-type')
+// 		.nodesBy(
+// 			function(n, options) {
+// 				if (!c.length || n.attributes[options.property] === c) {
+// 					nids.push(n.id);
+// 				};
+// 				return !c.length || n.attributes[options.property] === c;
+// 			},{
+// 				property: 'type'
+// 			},
+// 			'node-type'
+// 		)
+// 		.apply();
+
+//   	}
+//   	function applyCategoryFilter(e) {
+// 		var c = e.target[e.target.selectedIndex].value,
+// 			nids = [];
+// 		filter
+// 		.undo('node-category')
+// 		.nodesBy(
+// 			function(n, options) {
+// 				if (n.attributes[options.property] === c) {
+// 					nids.push(n.id);
+// 				};
+// 				return !c.length || n.attributes[options.property] === c;
+// 			},{
+// 				property: 'category'
+// 			},
+// 			'node-category'
+// 		)
+// 		.apply();		
+// 		locateNode(nids);
+//   	};
+//  	function applySearchFilter(e) {
+
+// 		var c = e.target.value,
+// 			nids = [];
+// 		filter
+// 		.undo('node-search')
+// 		.nodesBy(
+// 			function(n, options) {
+// 				if (n.label.toLowerCase().search(c) > -1) {
+// 					nids.push(n.id);
+// 				};
+// 				return n.label.toLowerCase().search(c) > -1;
+// 			},
+// 			{
+// 				property: 'RAWR'
+// 			},
+// 			'node-search'
+// 		)
+// 		.apply();
+// 		locateNode(nids);
+//   	}
+
+//   	$('#min-degree').change(applyMinDegreeFilter);  // for Chrome and FF
+//   	$('#min-edge').change(applyMinEdgeFilter); // for IE10+, that sucks  	
+//   	$('#node-type').change(applyTypeFilter);	
+//   	$('#node-category').change(applyCategoryFilter);
+//   	$('#node-search').change(applySearchFilter);	
+
+//  	//s.renderers[0].glyphs();
+//  	var Rend = s.renderers[0]
+// 	Rend.bind('render',function(e){
+// 		Rend.glyphs();
+// 	})
+
+// 	s.refresh();
+
+// 	var hash = window.location.hash.replace('#','');
+// 	if (hash!='') {locateNode(hash)};
+
+// 	$('#zoomIn').on('click',function(){
+// 		console.log(Rend.camera.ratio)
+// 		if (Rend.camera.ratio>0.5) {
+// 			Rend.camera.ratio =Rend.camera.ratio -0.5;	
+// 			s.refresh();
+// 		};
+		
+		
+// 	})
+// 	$('#zoomOut').on('click',function(){
+// 		if (Rend.camera.ratio<10) {
+// 			Rend.camera.ratio =Rend.camera.ratio +0.5;
+// 			s.refresh();
+// 		};	
+		
+// 	})
+// 	$('#zoomDef').on('click',function(){
+// 		console.log(Rend.camera.ratio)
+// 		Rend.camera.ratio =1;
+// 		s.refresh();
+// 	})
+// });
+
+var conf = {
+	animation: {
+		node: {
+		      duration: 800
+		},
+		edge: {
+			duration: 800
+		      },
+		center: {
+		      duration: 300
+		}
+	},
+	//focusOut: true,
+};	
+var locate = sigma.plugins.locate(s,conf);
+if (!s.settings('autoRescale')) {
+	sigma.utils.zoomTo(s.camera, 0, 0, conf.zoomDef);
+};
+
+function locateNode (nid) {
+	if (nid == '') {
+		locate.center(1);
+	}
+	else {
+    		locate.nodes(nid);
+	}
+};
+function humanize(str) {
+  return str
+      .replace(/^[\s_]+|[\s_]+$/g, '')
+      .replace(/[_\s]+/g, ' ')
+      .replace(/^[a-z]/, function(m) { return m.toUpperCase(); });
+}
+function updatePane (graph, filter) {
+	// get max degree
+	var maxDegree = 0,
+		maxEdge =0,
+		types = {},
+		categories = {};
+	// read nodes
+	graph.nodes().forEach(function(n) {
+			maxDegree = Math.max(maxDegree, graph.degree(n.id));
+			types[n.attributes.type] = true;
+			if (n.attributes.category){
+				categories[n.attributes.category] = true;
+			}
+			
+	});
+	graph.edges().forEach(function(n) {
+		maxEdge = Math.max(maxEdge, n.weight)
+	});
+
+	// min degree
+	$('#min-degree')[0].max = maxDegree;
+	$('#max-degree-value').html(maxDegree);
+	$('#min-edge')[0].max = maxEdge;
+	$('#max-edge-value').html(maxEdge);
+
+	// node category
+	var nodecategoryElt = $('#node-type');
+	Object.keys(types).forEach(function(c) {
+			var optionElt = $("<option value="+c+"></option>");
+			optionElt.append(humanize(c));
+			nodecategoryElt.append(optionElt);
+  	});
+
+	var nodecategoryElt = $('#node-category');
+	Object.keys(categories).forEach(function(c) {
+			var optionElt = $("<option></option>");
+			optionElt.append(c);
+			nodecategoryElt.append(optionElt);
+  	});
+
+
+	// reset button
+	  	$('#reset-btn').on("click", function(e) {
+		$('#min-degree').val(0);
+		$('#min-degree-val').html('0');
+		$('#node-type').selectedIndex = 0;
+		$('#node-category').selectedIndex = 0;
+		$('#min-edge').val(0);
+		$('#min-edge-val').html('0');	
+		filter.undo().apply();
+	  });
+
+
+};
+
+
+
+s.bind('clickNode', function(e) {
+	var adjacentNodes = [],
+		adjacentEdges = [];
+	adjacentNodes = adjacentNodes.concat(s.graph.adjacentNodes(e.data.node.id));
+	adjacentEdges = adjacentEdges.concat(s.graph.adjacentEdges(e.data.node.id));
+	var meta  = e.data.node.attributes;
+	template = '<hr><label for="sharDis">Share this!</label><input class="form-control" type="text" value="gregroberts.github.io#'+e.data.node.id+'">';
+	switch(meta['node type']){
+		case 'topic':
+			template += '<h3><a href="'+meta.url+'" target="new">'+meta.name+'</a></h3>';
+			template +='<b>A StackOverflow Tag with '+meta.size+' questions</b><hr>';	
+			template += '<p>'+meta['one liner'];
+			template += '<b><a href="'+meta.url+'" target="new">Read More...</a></b>'
+			template +='</p><i>(Taken from the StackOverflow wiki page)</i><br>';
+			;
+		break;
+		case 'books':
+			template += '<h3><a href="'+meta.url+'" target="new">'+meta.title+'</a></h3>';
+			template += '<table><tr><td style="padding-right:10px"><a href="'+meta.url+'" target="new"><img style="diplay:inline" src="https://packtpub.com/'+meta['cover image']+'" height="220" ></img></a></td>';
+
+			template +='<td>'+meta['one liner']+'<br>';
+			if (meta.authors != 'NULL') {
+				template += ' written by '+meta.authors.replace(',',' and ');
+			}
+			template +='<br>Page count: </b>'+meta['page count']+'<br>';
+			template += '<br>Published:</b> '+meta['publication date']+'<br>';
+			template+='</td></tr></table><br>';	
+			
+		break;
+		case 'videos':
+			template += '<h3><a href="'+meta.url+'" target="new">'+meta.title+'</a></h3>';
+			template += '<table><tr><td style="padding-right:10px"><a href="'+meta.url+'" target="new"><img style="diplay:inline" src="https://packtpub.com/'+meta['cover image']+'" height="220" ></img></a></td>';
+
+			template +='<td>'+meta['one liner']+'<br>';
+			if (meta.authors != 'NULL') {
+				template += ' written by '+meta.authors.replace(',',' and ');
+			}
+			template +='<br>Duration: </b>'+meta['page count']+'<br>';
+			template += '<br>Published:</b> '+meta['publication date']+'<br>';
+			template+='</td></tr></table><br>';	
+				console.log(meta);		
+			if (meta['on offer']!='') {
+				template += '<a target="new" href="https://packtpub.com/add_to_cart/'+meta['on offer']+'"><button class="btn btn-success"><b>Hey! This title is on special offer for Python week!<br> Click here to save 50%</b></button></a>';
+			};
+
+		break;
+		case 'blog':
+			template += '<h3><a href="'+meta.url+'" target="new">'+meta.title+'</a></h3>';
+			template += '<b>A Blog written by '+meta.authors.replace(',',' and ')+'<hr>';
+			template += '<br>Published:</b> '+meta['publication date']+'<br>';
+			template += '<p>'+meta['one liner']+'</p>';
+		break;
+		case 'techprimer':
+			template += '<h3><a href="'+meta.url+'" target="new">'+meta.title+'</a></h3>';
+			template += '<b>A Packt Tech Primer<hr>';
+			template += '<br>Published:</b> '+meta['publication date']+'<br>';
+			template += '<p>'+meta['one liner']+'</p>';
+		break;
+
+	};
+	var related_topics = '<table class="table table-striped"><thead><th>Related Topic Nodes</th></thead><tbody>';
+	var related_titles = '<table class="table table-striped"><tbody>';
+	var categorise = {};
+	for (var i = adjacentNodes.length - 1; i >= 0; i--) {
+		t = adjacentNodes[i];
+		if( t.attributes.type=='topic') {
+			related_topics += '<tr><td><a class="locate" data-id="'+t.id+'">'+t.label +'</a></td></tr>';
+		}
+		else {
+			if (t.attributes.category in categorise) {
+				categorise[t.attributes.category].push([t.id,t.label]);
+			} else{
+				categorise[t.attributes.category] = [[t.id,t.label]];
+			};
+			
+		}
+	};
+	for (key in categorise) {
+		related_titles +='<tr><th>Related '+key+' Nodes</th></tr>';
+		for (var i = categorise[key].length - 1; i >= 0; i--) {
+			var j = categorise[key][i];
+			related_titles += '<tr><td><a class="locate" data-id="'+j[0]+'">'+j[1] +'</a></td></tr>';	
+		};
+	};
+	related_topics+='</tbody></table>';
+	related_titles += '</tbody></table>';
+	template += related_titles + related_topics;
+	$('#infoPanel').empty().html(template);
+	$('.locate').on('click', function(e){
+		locateNode($(this).attr('data-id'));
+	})
+});
+
+$('#layout').on('click',function () {
+	var config = {
+		linLogMode:true,
+		barnesHutOptimize:true,
+		alignNodeSiblings :true,
+	}
+	if (! sigma.layouts.isForceLinkRunning()) {
+		sigma.layouts.startForceLink(s,config);
+	} else {
+		sigma.layouts.stopForceLink(s,config);
+	};
+})
+
+
+
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-68657545-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>
+

@@ -1,138 +1,115 @@
+{% load static %}
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+{% load static %}
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
 <!-- START SIGMA IMPORTS -->
 {% load static %}
 <script src="{% static "sigma.js/src/sigma.core.js" %}"></script>
-
-<!-- <script src="sigma.js/src/sigma.core.js"></script> -->
 {% load static %}
 <script src="{% static "sigma.js/src/conrad.js" %}" ></script>
-<!-- <script src="sigma.js/src/conrad.js"></script> -->
-
 {% load static %}
 <script src="{% static "sigma.js/src/utils/sigma.utils.js" %}" ></script>
-<!-- <script src="../src/utils/sigma.utils.js"></script> -->
 {% load static %}
 <script src="{% static "sigma.js/src/utils/sigma.polyfills.js" %}" ></script>
-<!-- <script src="../src/utils/sigma.polyfills.js"></script> -->
 {% load static %}
 <script src="{% static "sigma.js/src/sigma.settings.js" %}" ></script>
-<!-- <script src="../src/sigma.settings.js"></script> -->
 {% load static %}
 <script src="{% static "sigma.js/src/classes/sigma.classes.dispatcher.js" %}" ></script>
-<!-- <script src="../src/classes/sigma.classes.dispatcher.js"></script> -->
 {% load static %}
 <script src="{% static "sigma.js/src/classes/sigma.classes.configurable.js" %}" ></script>
-<!-- <script src="../src/classes/sigma.classes.configurable.js"></script> -->
 {% load static %}
 <script src="{% static "sigma.js/src/classes/sigma.classes.graph.js" %}" ></script>
-<!-- <script src="../src/classes/sigma.classes.graph.js"></script> -->
 {% load static %}
 <script src="{% static "sigma.js/src/classes/sigma.classes.camera.js" %}" ></script>
-<!-- <script src="../src/classes/sigma.classes.camera.js"></script> -->
 {% load static %}
 <script src="{% static "sigma.js/src/classes/sigma.classes.quad.js" %}" ></script>
-<!-- <script src="../src/classes/sigma.classes.quad.js"></script> -->
 {% load static %}
 <script src="{% static "sigma.js/src/classes/sigma.classes.edgequad.js" %}" ></script>
-<!-- <script src="../src/classes/sigma.classes.edgequad.js"></script> -->
-
 <script src="{% static "sigma.js/src/captors/sigma.captors.mouse.js" %}" ></script>
-<!-- <script src="../src/captors/sigma.captors.mouse.js"></script> -->
-
 <script src="{% static "sigma.js/src/captors/sigma.captors.touch.js" %}" ></script>
-<!-- <script src="../src/captors/sigma.captors.touch.js"></script> -->
-
 <script src="{% static "sigma.js/src/renderers/sigma.renderers.canvas.js" %}" ></script>
-<!-- <script src="../src/renderers/sigma.renderers.canvas.js"></script> -->
-
 <script src="{% static "sigma.js/src/renderers/sigma.renderers.webgl.js" %}" ></script>
-<!-- <script src="../src/renderers/sigma.renderers.webgl.js"></script> -->
-
 <script src="{% static "sigma.js/src/renderers/sigma.renderers.svg.js" %}" ></script>
-<!-- <script src="../src/renderers/sigma.renderers.svg.js"></script> -->
-
 <script src="{% static "sigma.js/src/renderers/sigma.renderers.def.js" %}" ></script>
-<!-- <script src="../src/renderers/sigma.renderers.def.js"></script> -->
-
 <script src="{% static "sigma.js/src/renderers/webgl/sigma.webgl.nodes.def.js" %}" ></script>
-<!-- <script src="../src/renderers/webgl/sigma.webgl.nodes.def.js"></script> -->
-
 <script src="{% static "sigma.js/src/renderers/webgl/sigma.webgl.nodes.fast.js" %}" ></script>
-<!-- <script src="../src/renderers/webgl/sigma.webgl.nodes.fast.js"></script> -->
-
 <script src="{% static "sigma.js/src/renderers/webgl/sigma.webgl.edges.def.js" %}" ></script>
-<!-- <script src="../src/renderers/webgl/sigma.webgl.edges.def.js"></script> -->
-
 <script src="{% static "sigma.js/src/renderers/webgl/sigma.webgl.edges.fast.js" %}" ></script>
-<!-- <script src="../src/renderers/webgl/sigma.webgl.edges.fast.js"></script> -->
-
 <script src="{% static "sigma.js/src/renderers/webgl/sigma.webgl.edges.arrow.js" %}" ></script>
-<!-- <script src="../src/renderers/webgl/sigma.webgl.edges.arrow.js"></script> -->
-
 <script src="{% static "sigma.js/src/renderers/canvas/sigma.canvas.labels.def.js" %}" ></script>
-<!-- <script src="../src/renderers/canvas/sigma.canvas.labels.def.js"></script> -->
-
 <script src="{% static "sigma.js/src/renderers/canvas/sigma.canvas.hovers.def.js" %}" ></script>
-<!-- <script src="../src/renderers/canvas/sigma.canvas.hovers.def.js"></script> -->
-
 <script src="{% static "sigma.js/src/renderers/canvas/sigma.canvas.nodes.def.js" %}" ></script>
-<!-- <script src="../src/renderers/canvas/sigma.canvas.nodes.def.js"></script> -->
-
 <script src="{% static "sigma.js/src/renderers/canvas/sigma.canvas.edges.def.js" %}" ></script>
-<!-- <script src="../src/renderers/canvas/sigma.canvas.edges.def.js"></script> -->
-
 <script src="{% static "sigma.js/src/renderers/canvas/sigma.canvas.edges.curve.js" %}" ></script>
-<!-- <script src="../src/renderers/canvas/sigma.canvas.edges.curve.js"></script> -->
-
 <script src="{% static "sigma.js/src/renderers/canvas/sigma.canvas.edges.arrow.js" %}" ></script>
-<!-- <script src="../src/renderers/canvas/sigma.canvas.edges.arrow.js"></script> -->
-
 <script src="{% static "sigma.js/src/renderers/canvas/sigma.canvas.edges.curvedArrow.js" %}" ></script>
-<!-- <script src="../src/renderers/canvas/sigma.canvas.edges.curvedArrow.js"></script> -->
 <script src="{% static "sigma.js/src/renderers/canvas/sigma.canvas.edgehovers.def.js" %}" ></script>
-<!-- <script src="../src/renderers/canvas/sigma.canvas.edgehovers.def.js"></script> -->
 <script src="{% static "sigma.js/src/renderers/canvas/sigma.canvas.edgehovers.curve.js" %}" ></script>
-<!-- <script src="../src/renderers/canvas/sigma.canvas.edgehovers.curve.js"></script> -->
 <script src="{% static "sigma.js/src/renderers/canvas/sigma.canvas.edgehovers.arrow.js" %}" ></script>
-<!-- <script src="../src/renderers/canvas/sigma.canvas.edgehovers.arrow.js"></script> -->
 <script src="{% static "sigma.js/src/renderers/canvas/sigma.canvas.edgehovers.curvedArrow.js" %}" ></script>
-<!-- <script src="../src/renderers/canvas/sigma.canvas.edgehovers.curvedArrow.js"></script> -->
 <script src="{% static "sigma.js/src/renderers/canvas/sigma.canvas.extremities.def.js" %}" ></script>
-<!-- <script src="../src/renderers/canvas/sigma.canvas.extremities.def.js"></script> -->
 <script src="{% static "sigma.js/src/renderers/svg/sigma.svg.utils.js" %}" ></script>
-<!-- <script src="../src/renderers/svg/sigma.svg.utils.js"></script> -->
 <script src="{% static "sigma.js/src/renderers/svg/sigma.svg.nodes.def.js" %}" ></script>
-<!-- <script src="../src/renderers/svg/sigma.svg.nodes.def.js"></script> -->
 <script src="{% static "sigma.js/src/renderers/svg/sigma.svg.edges.def.js" %}" ></script>
-<!-- <script src="../src/renderers/svg/sigma.svg.edges.def.js"></script> -->
 <script src="{% static "sigma.js/src/renderers/svg/sigma.svg.edges.curve.js" %}" ></script>
-<!-- <script src="../src/renderers/svg/sigma.svg.edges.curve.js"></script> -->
 <script src="{% static "sigma.js/src/renderers/svg/sigma.svg.labels.def.js" %}" ></script>
-<!-- <script src="../src/renderers/svg/sigma.svg.labels.def.js"></script> -->
 <script src="{% static "sigma.js/src/renderers/svg/sigma.svg.hovers.def.js" %}" ></script>
-<!-- <script src="../src/renderers/svg/sigma.svg.hovers.def.js"></script> -->
 <script src="{% static "sigma.js/src/middlewares/sigma.middlewares.rescale.js" %}" ></script>
-<!-- <script src="../src/middlewares/sigma.middlewares.rescale.js"></script> -->
 <script src="{% static "sigma.js/src/middlewares/sigma.middlewares.copy.js" %}" ></script>
-<!-- <script src="../src/middlewares/sigma.middlewares.copy.js"></script> -->
 <script src="{% static "sigma.js/src/misc/sigma.misc.animation.js" %}" ></script>
-<!-- <script src="../src/misc/sigma.misc.animation.js"></script> -->
 <script src="{% static "sigma.js/src/misc/sigma.misc.bindEvents.js" %}" ></script>
-<!-- <script src="../src/misc/sigma.misc.bindEvents.js"></script> -->
 <script src="{% static "sigma.js/src/misc/sigma.misc.bindDOMEvents.js" %}" ></script>
-<!-- <script src="../src/misc/sigma.misc.bindDOMEvents.js"></script> -->
 <script src="{% static "sigma.js/src/misc/sigma.misc.drawHovers.js" %}" ></script>
-<!-- <script src="../src/misc/sigma.misc.drawHovers.js"></script>  -->
-
-<!-- END SIGMA IMPORTS -->
 <script src="{% static "sigma.js/plugins/sigma.parsers.json/sigma.parsers.json.js" %}" ></script>
-<!-- <script src="../plugins/sigma.parsers.json/sigma.parsers.json.js"></script> -->
+<script>
 
+ {% block jquery %}
+ function showgraph()
+ {
+	 // var gdata = 'search/api/graphdata/'
+	 // console.log(gdata)
+	 var gdata = '';
+	 $.ajax({
+	 	method: "GET",
+	 	url: "../search/api/graphdata/",
+	 	// type:"POST",
+	 	success: function(data){
+	 		console.log(data)
+	 		gdata = data;
+	 	},
+	 	error: function(error_data){
+	 		console.log("error")
+	 		console.log(error_data)
+	 	}
+	 })
+
+	 console.log("gdata After ...");
+	 console.log(gdata)
+ }
+
+s = new sigma({
+  graph: g,
+  container: 'container'
+});
+
+ {% endblock %}
+
+//sigma.parsers.json('data/arctic.json', {
+//  container: 'graph-container'
+//});
+</script>
 
 <div>
 	Hello World !!!!!
+	
 </div>
+<div><button type="button" onclick="showgraph()">Show</button></div>
 
-<div id="container">
+<!-- <div id="container">
   <style>
     #graph-container {
       top: 0;
@@ -143,28 +120,6 @@
     }
   </style>
   <div id="graph-container"></div>
-</div>
+</div> -->
 
-<script>
-/**
- * Here is just a basic example on how to properly display a graph
- * exported from Gephi as a JSON file, with the JSON Exporter plugin from
- * the Oxford Internet Institute:
- *
- *  > https://marketplace.gephi.org/plugin/json-exporter/
- *
- * The plugin sigma.parsers.json can load and parse the JSON graph file,
- * and instantiate sigma when the graph is received.
- *
- * The object given as the second parameter is the base of the instance
- * configuration object. The plugin will just add the "graph" key to it
- * before the instanciation.
- */
- //{% block jquery %}
- //var data = '/api/graph_data/'
- //{% endblock %}
 
-//sigma.parsers.json('data/arctic.json', {
-//  container: 'graph-container'
-//});
-</script>

@@ -11,8 +11,11 @@ urlpatterns = [
     path('search/', views.search, name='search'),
     path('results/', views.results, name='results'),
     path('results_graph/', views.results_graph, name='results_graph'),
-    path('api/graph_data', views.graph_data, name='api-graph-data'),
+    path('search/api/graphdata', views.graph_data, name='search-api-graphdata'),
+    path('search/api/expand', views.expand_with_neighbors, name='search-api-expand'),
+    path('api/search/', views.demoSearch, name='api-search'),
     path('boost/', views.boost, name='boost'),
+    path('demo/', views.demov1, name='demov1'),
 ]
 
 #path('<slug:keywords>/',views.search, name='search'),
