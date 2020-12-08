@@ -37,7 +37,7 @@ def main():
     #========================================== 
     # initialization
     #========================================== 
-    path = '/Users/princess/Documents/PhD/thesis/code/aurum-datadiscovery-master/mytest/testmodel3/'
+    path = '/Users/princess/Documents/PhD/thesis/code/aurum-datadiscovery-master/mytest/testmodel4/'
     store = StoreHandler()
 
     # ddapi:
@@ -60,11 +60,11 @@ def main():
     #         print(minhash)
     #         f.write(str(k)+" " + ' '.join(['{}'.format((r)) for r in minhash] ) + "\n")
    
-    with open("/Users/princess/Documents/PhD/thesis/code/sigma.js-master/examples/data/" + "nodesmhsig", 'r') as f:
-        s = f.read()
-        for r in s:
-            print(s) 
-            print("\n\n")
+    # with open("/Users/princess/Documents/PhD/thesis/code/sigma.js-master/examples/data/" + "nodesmhsig", 'r') as f:
+    #     s = f.read()
+    #     for r in s:
+    #         print(s) 
+    #         print("\n\n")
        
 
 
@@ -75,9 +75,9 @@ def main():
     #     print("\na:\n")
     #     for a in r:
     #         print(a)
-    print ("\n\n============\nschema_sim_index:\n")
-    print (schema_sim_index)
-    print("\n\n====================\nVisulaize Graph\n=====================\n\n")
+    # print ("\n\n============\nschema_sim_index:\n")
+    # print (schema_sim_index)
+    # print("\n\n====================\nVisulaize Graph\n=====================\n\n")
     # network._visualize_graph()
     #serialize_network_to_csv(network, '/Users/princess/Documents/PhD/thesis/code/')
     # serialize_network_to_json(network, '/Users/princess/Documents/PhD/thesis/code/sigma.js-master/examples/data/')

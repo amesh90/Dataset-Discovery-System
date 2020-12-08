@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"attr",
+				"attributes"
+			],
+			[
+				"up",
+				"update_serialized_network"
+			],
+			[
+				"error",
+				"error_data"
+			],
+			[
+				"res",
+				"resultMap"
+			],
+			[
+				"resu",
+				"resultMapWithProv"
+			],
+			[
 				"demo",
 				"demoscript"
 			],
@@ -21,10 +41,6 @@
 			],
 			[
 				"result",
-				"resultMap"
-			],
-			[
-				"res",
 				"resultMap"
 			],
 			[
@@ -54,10 +70,6 @@
 			[
 				"table",
 				"table_drs"
-			],
-			[
-				"resu",
-				"result2"
 			],
 			[
 				"Read",
@@ -288,10 +300,6 @@
 				"threshold"
 			],
 			[
-				"attr",
-				"attributeId"
-			],
-			[
 				"samp",
 				"sampleIds"
 			],
@@ -506,24 +514,19 @@
 			[
 				"firsT",
 				"firstTuple"
-			],
-			[
-				"return",
-				"returnedTuples"
-			],
-			[
-				"outer",
-				"outerslot"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "urls.py",
+			"contents": "<!-- \n{% load static %}\n<img src=\"{% static \"1.jpg\" %}\" alt=\"My image\"/>\n -->\n<!-- <script src=\"https://cdn.jsdelivr.net/npm/sigma@1.2.1/src/sigma.core.js\"></script>\n<script src=\"https://cdn.jsdelivr.net/npm/sigma@1.2.1/src/conrad.js\"></script>\n<script src=\"https://cdn.jsdelivr.net/npm/sigma@1.2.1/src/utils/sigma.utils.js\"></script>\n<script src=\"https://cdn.jsdelivr.net/npm/sigma@1.2.1/src/utils/sigma.polyfills.js\"></script>\n<script src=\"https://cdn.jsdelivr.net/npm/sigma@1.2.1/src/sigma.settings.js\"></script>\n<script src=\"https://cdn.jsdelivr.net/npm/sigma@1.2.1/src/classes/sigma.classes.dispatcher.js\"></script>\n<script src=\"https://cdn.jsdelivr.net/npm/sigma@1.2.1/src/classes/sigma.classes.configurable.js\"></script>\n<script src=\"https://cdn.jsdelivr.net/npm/sigma@1.2.1/src/classes/sigma.classes.graph.js\"></script>\n<script src=\"https://cdn.jsdelivr.net/npm/sigma@1.2.1/src/classes/sigma.classes.camera.js\"></script>\n<script src=\"https://cdn.jsdelivr.net/npm/sigma@1.2.1/src/classes/sigma.classes.quad.js\"></script>\n<script src=\"https://cdn.jsdelivr.net/npm/sigma@1.2.1/src/classes/sigma.classes.edgequad.js\"></script>\n<script src=\"https://cdn.jsdelivr.net/npm/sigma@1.2.1/src/captors/sigma.captors.mouse.js\"></script>\n<script src=\"https://cdn.jsdelivr.net/npm/sigma@1.2.1/src/captors/sigma.captors.touch.js\"></script>\n<script src=\"https://cdn.jsdelivr.net/npm/sigma@1.2.1/src/renderers/sigma.renderers.canvas.js\"></script>\n<script src=\"https://cdn.jsdelivr.net/npm/sigma@1.2.1/src/renderers/sigma.renderers.webgl.js\"></script>\n<script src=\"https://cdn.jsdelivr.net/npm/sigma@1.2.1/src/renderers/sigma.renderers.svg.js\"></script>\n<script src=\"https://cdn.jsdelivr.net/npm/sigma@1.2.1/src/renderers/sigma.renderers.def.js\"></script>\n<script src=\"https://cdn.jsdelivr.net/npm/sigma@1.2.1/src/renderers/canvas/sigma.canvas.labels.def.js\"></script>\n<script src=\"https://cdn.jsdelivr.net/npm/sigma@1.2.1/src/renderers/canvas/sigma.canvas.hovers.def.js\"></script>\n<script src=\"https://cdn.jsdelivr.net/npm/sigma@1.2.1/src/renderers/canvas/sigma.canvas.nodes.def.js\"></script>\n<script src=\"https://cdn.jsdelivr.net/npm/sigma@1.2.1/src/renderers/canvas/sigma.canvas.edges.def.js\"></script>\n<script src=\"https://cdn.jsdelivr.net/npm/sigma@1.2.1/src/renderers/canvas/sigma.canvas.edges.curve.js\"></script>\n<script src=\"https://cdn.jsdelivr.net/npm/sigma@1.2.1/src/renderers/canvas/sigma.canvas.edges.arrow.js\"></script>\n<script src=\"https://cdn.jsdelivr.net/npm/sigma@1.2.1/src/renderers/canvas/sigma.canvas.edges.curvedArrow.js\"></script>\n<script src=\"https://cdn.jsdelivr.net/npm/sigma@1.2.1/src/renderers/canvas/sigma.canvas.edgehovers.def.js\"></script>\n<script src=\"https://cdn.jsdelivr.net/npm/sigma@1.2.1/src/renderers/canvas/sigma.canvas.edgehovers.curve.js\"></script>\n<script src=\"https://cdn.jsdelivr.net/npm/sigma@1.2.1/src/renderers/canvas/sigma.canvas.edgehovers.arrow.js\"></script>\n<script src=\"https://cdn.jsdelivr.net/npm/sigma@1.2.1/src/renderers/canvas/sigma.canvas.edgehovers.curvedArrow.js\"></script>\n<script src=\"https://cdn.jsdelivr.net/npm/sigma@1.2.1/src/renderers/canvas/sigma.canvas.extremities.def.js\"></script>\n<script src=\"https://cdn.jsdelivr.net/npm/sigma@1.2.1/src/middlewares/sigma.middlewares.rescale.js\"></script>\n<script src=\"https://cdn.jsdelivr.net/npm/sigma@1.2.1/src/middlewares/sigma.middlewares.copy.js\"></script>\n<script src=\"https://cdn.jsdelivr.net/npm/sigma@1.2.1/src/misc/sigma.misc.animation.js\"></script>\n<script src=\"https://cdn.jsdelivr.net/npm/sigma@1.2.1/src/misc/sigma.misc.bindEvents.js\"></script>\n<script src=\"https://cdn.jsdelivr.net/npm/sigma@1.2.1/src/misc/sigma.misc.bindDOMEvents.js\"></script>\n<script src=\"https://cdn.jsdelivr.net/npm/sigma@1.2.1/src/misc/sigma.misc.drawHovers.js\"></script>\n\n<script src=\"https://cdn.jsdelivr.net/npm/sigma@1.2.1/src/renderers/webgl/sigma.webgl.nodes.def.js\"></script>\n<script src=\"https://cdn.jsdelivr.net/npm/sigma@1.2.1/src/renderers/webgl/sigma.webgl.nodes.fast.js\"></script>\n\n<script src=\"https://cdn.jsdelivr.net/npm/sigma@1.2.1/src/renderers/webgl/sigma.webgl.edges.def.js\"></script>\n<script src=\"https://cdn.jsdelivr.net/npm/sigma@1.2.1/src/renderers/webgl/sigma.webgl.edges.fast.js\"></script>\n<script src=\"https://cdn.jsdelivr.net/npm/sigma@1.2.1/src/renderers/webgl/sigma.webgl.edges.arrow.js\"></script> -->\n\n<!-- START SIGMA IMPORTS -->\n{% load static %}\n<script src=\"{% static \"sigma.js/src/sigma.core.js\" %}\"></script>\n\n<!-- <script src=\"sigma.js/src/sigma.core.js\"></script> -->\n{% load static %}\n<script src=\"{% static \"sigma.js/src/conrad.js\" %}\" ></script>\n<!-- <script src=\"sigma.js/src/conrad.js\"></script> -->\n\n{% load static %}\n<script src=\"{% static \"sigma.js/src/utils/sigma.utils.js\" %}\" ></script>\n<!-- <script src=\"../src/utils/sigma.utils.js\"></script> -->\n{% load static %}\n<script src=\"{% static \"sigma.js/src/utils/sigma.polyfills.js\" %}\" ></script>\n<!-- <script src=\"../src/utils/sigma.polyfills.js\"></script> -->\n{% load static %}\n<script src=\"{% static \"sigma.js/src/sigma.settings.js\" %}\" ></script>\n<!-- <script src=\"../src/sigma.settings.js\"></script> -->\n{% load static %}\n<script src=\"{% static \"sigma.js/src/classes/sigma.classes.dispatcher.js\" %}\" ></script>\n<!-- <script src=\"../src/classes/sigma.classes.dispatcher.js\"></script> -->\n{% load static %}\n<script src=\"{% static \"sigma.js/src/classes/sigma.classes.configurable.js\" %}\" ></script>\n<!-- <script src=\"../src/classes/sigma.classes.configurable.js\"></script> -->\n{% load static %}\n<script src=\"{% static \"sigma.js/src/classes/sigma.classes.graph.js\" %}\" ></script>\n<!-- <script src=\"../src/classes/sigma.classes.graph.js\"></script> -->\n{% load static %}\n<script src=\"{% static \"sigma.js/src/classes/sigma.classes.camera.js\" %}\" ></script>\n<!-- <script src=\"../src/classes/sigma.classes.camera.js\"></script> -->\n{% load static %}\n<script src=\"{% static \"sigma.js/src/classes/sigma.classes.quad.js\" %}\" ></script>\n<!-- <script src=\"../src/classes/sigma.classes.quad.js\"></script> -->\n{% load static %}\n<script src=\"{% static \"sigma.js/src/classes/sigma.classes.edgequad.js\" %}\" ></script>\n<!-- <script src=\"../src/classes/sigma.classes.edgequad.js\"></script> -->\n\n<script src=\"{% static \"sigma.js/src/captors/sigma.captors.mouse.js\" %}\" ></script>\n<!-- <script src=\"../src/captors/sigma.captors.mouse.js\"></script> -->\n\n<script src=\"{% static \"sigma.js/src/captors/sigma.captors.touch.js\" %}\" ></script>\n<!-- <script src=\"../src/captors/sigma.captors.touch.js\"></script> -->\n\n<script src=\"{% static \"sigma.js/src/renderers/sigma.renderers.canvas.js\" %}\" ></script>\n<!-- <script src=\"../src/renderers/sigma.renderers.canvas.js\"></script> -->\n\n<script src=\"{% static \"sigma.js/src/renderers/sigma.renderers.webgl.js\" %}\" ></script>\n<!-- <script src=\"../src/renderers/sigma.renderers.webgl.js\"></script> -->\n\n<script src=\"{% static \"sigma.js/src/renderers/sigma.renderers.svg.js\" %}\" ></script>\n<!-- <script src=\"../src/renderers/sigma.renderers.svg.js\"></script> -->\n\n<script src=\"{% static \"sigma.js/src/renderers/sigma.renderers.def.js\" %}\" ></script>\n<!-- <script src=\"../src/renderers/sigma.renderers.def.js\"></script> -->\n\n<script src=\"{% static \"sigma.js/src/renderers/webgl/sigma.webgl.nodes.def.js\" %}\" ></script>\n<!-- <script src=\"../src/renderers/webgl/sigma.webgl.nodes.def.js\"></script> -->\n\n<script src=\"{% static \"sigma.js/src/renderers/webgl/sigma.webgl.nodes.fast.js\" %}\" ></script>\n<!-- <script src=\"../src/renderers/webgl/sigma.webgl.nodes.fast.js\"></script> -->\n\n<script src=\"{% static \"sigma.js/src/renderers/webgl/sigma.webgl.edges.def.js\" %}\" ></script>\n<!-- <script src=\"../src/renderers/webgl/sigma.webgl.edges.def.js\"></script> -->\n\n<script src=\"{% static \"sigma.js/src/renderers/webgl/sigma.webgl.edges.fast.js\" %}\" ></script>\n<!-- <script src=\"../src/renderers/webgl/sigma.webgl.edges.fast.js\"></script> -->\n\n<script src=\"{% static \"sigma.js/src/renderers/webgl/sigma.webgl.edges.arrow.js\" %}\" ></script>\n<!-- <script src=\"../src/renderers/webgl/sigma.webgl.edges.arrow.js\"></script> -->\n\n<script src=\"{% static \"sigma.js/src/renderers/canvas/sigma.canvas.labels.def.js\" %}\" ></script>\n<!-- <script src=\"../src/renderers/canvas/sigma.canvas.labels.def.js\"></script> -->\n\n<script src=\"{% static \"sigma.js/src/renderers/canvas/sigma.canvas.hovers.def.js\" %}\" ></script>\n<!-- <script src=\"../src/renderers/canvas/sigma.canvas.hovers.def.js\"></script> -->\n\n<script src=\"{% static \"sigma.js/src/renderers/canvas/sigma.canvas.nodes.def.js\" %}\" ></script>\n<!-- <script src=\"../src/renderers/canvas/sigma.canvas.nodes.def.js\"></script> -->\n\n<script src=\"{% static \"sigma.js/src/renderers/canvas/sigma.canvas.edges.def.js\" %}\" ></script>\n<!-- <script src=\"../src/renderers/canvas/sigma.canvas.edges.def.js\"></script> -->\n\n<script src=\"{% static \"sigma.js/src/renderers/canvas/sigma.canvas.edges.curve.js\" %}\" ></script>\n<!-- <script src=\"../src/renderers/canvas/sigma.canvas.edges.curve.js\"></script> -->\n\n<script src=\"{% static \"sigma.js/src/renderers/canvas/sigma.canvas.edges.arrow.js\" %}\" ></script>\n<!-- <script src=\"../src/renderers/canvas/sigma.canvas.edges.arrow.js\"></script> -->\n\n<script src=\"{% static \"sigma.js/src/renderers/canvas/sigma.canvas.edges.curvedArrow.js\" %}\" ></script>\n<!-- <script src=\"../src/renderers/canvas/sigma.canvas.edges.curvedArrow.js\"></script> -->\n<script src=\"{% static \"sigma.js/src/renderers/canvas/sigma.canvas.edgehovers.def.js\" %}\" ></script>\n<!-- <script src=\"../src/renderers/canvas/sigma.canvas.edgehovers.def.js\"></script> -->\n<script src=\"{% static \"sigma.js/src/renderers/canvas/sigma.canvas.edgehovers.curve.js\" %}\" ></script>\n<!-- <script src=\"../src/renderers/canvas/sigma.canvas.edgehovers.curve.js\"></script> -->\n<script src=\"{% static \"sigma.js/src/renderers/canvas/sigma.canvas.edgehovers.arrow.js\" %}\" ></script>\n<!-- <script src=\"../src/renderers/canvas/sigma.canvas.edgehovers.arrow.js\"></script> -->\n<script src=\"{% static \"sigma.js/src/renderers/canvas/sigma.canvas.edgehovers.curvedArrow.js\" %}\" ></script>\n<!-- <script src=\"../src/renderers/canvas/sigma.canvas.edgehovers.curvedArrow.js\"></script> -->\n<script src=\"{% static \"sigma.js/src/renderers/canvas/sigma.canvas.extremities.def.js\" %}\" ></script>\n<!-- <script src=\"../src/renderers/canvas/sigma.canvas.extremities.def.js\"></script> -->\n<script src=\"{% static \"sigma.js/src/renderers/svg/sigma.svg.utils.js\" %}\" ></script>\n<!-- <script src=\"../src/renderers/svg/sigma.svg.utils.js\"></script> -->\n<script src=\"{% static \"sigma.js/src/renderers/svg/sigma.svg.nodes.def.js\" %}\" ></script>\n<!-- <script src=\"../src/renderers/svg/sigma.svg.nodes.def.js\"></script> -->\n<script src=\"{% static \"sigma.js/src/renderers/svg/sigma.svg.edges.def.js\" %}\" ></script>\n<!-- <script src=\"../src/renderers/svg/sigma.svg.edges.def.js\"></script> -->\n<script src=\"{% static \"sigma.js/src/renderers/svg/sigma.svg.edges.curve.js\" %}\" ></script>\n<!-- <script src=\"../src/renderers/svg/sigma.svg.edges.curve.js\"></script> -->\n<script src=\"{% static \"sigma.js/src/renderers/svg/sigma.svg.labels.def.js\" %}\" ></script>\n<!-- <script src=\"../src/renderers/svg/sigma.svg.labels.def.js\"></script> -->\n<script src=\"{% static \"sigma.js/src/renderers/svg/sigma.svg.hovers.def.js\" %}\" ></script>\n<!-- <script src=\"../src/renderers/svg/sigma.svg.hovers.def.js\"></script> -->\n<script src=\"{% static \"sigma.js/src/middlewares/sigma.middlewares.rescale.js\" %}\" ></script>\n<!-- <script src=\"../src/middlewares/sigma.middlewares.rescale.js\"></script> -->\n<script src=\"{% static \"sigma.js/src/middlewares/sigma.middlewares.copy.js\" %}\" ></script>\n<!-- <script src=\"../src/middlewares/sigma.middlewares.copy.js\"></script> -->\n<script src=\"{% static \"sigma.js/src/misc/sigma.misc.animation.js\" %}\" ></script>\n<!-- <script src=\"../src/misc/sigma.misc.animation.js\"></script> -->\n<script src=\"{% static \"sigma.js/src/misc/sigma.misc.bindEvents.js\" %}\" ></script>\n<!-- <script src=\"../src/misc/sigma.misc.bindEvents.js\"></script> -->\n<script src=\"{% static \"sigma.js/src/misc/sigma.misc.bindDOMEvents.js\" %}\" ></script>\n<!-- <script src=\"../src/misc/sigma.misc.bindDOMEvents.js\"></script> -->\n<script src=\"{% static \"sigma.js/src/misc/sigma.misc.drawHovers.js\" %}\" ></script>\n<!-- <script src=\"../src/misc/sigma.misc.drawHovers.js\"></script>  -->\n\n<!-- END SIGMA IMPORTS -->\n<script src=\"{% static \"sigma.js/plugins/sigma.parsers.json/sigma.parsers.json.js\" %}\" ></script>\n<!-- <script src=\"../plugins/sigma.parsers.json/sigma.parsers.json.js\"></script> -->\n<div id=\"container\">\n  <style>\n    #graph-container {\n      top: 0;\n      bottom: 0;\n      left: 0;\n      right: 0;\n      position: absolute;\n    }\n  </style>\n  <div id=\"graph-container\"></div>\n</div>\n<script>\n/**\n * Here is just a basic example on how to properly display a graph\n * exported from Gephi as a JSON file, with the JSON Exporter plugin from\n * the Oxford Internet Institute:\n *\n *  > https://marketplace.gephi.org/plugin/json-exporter/\n *\n * The plugin sigma.parsers.json can load and parse the JSON graph file,\n * and instantiate sigma when the graph is received.\n *\n * The object given as the second parameter is the base of the instance\n * configuration object. The plugin will just add the \"graph\" key to it\n * before the instanciation.\n */\nsigma.parsers.json('data/arctic.json', {\n  container: 'graph-container'\n});\n</script>\n\n<!-- <div id=\"container\">\n  <style>\n    #graph-container {\n      top: 0;\n      bottom: 0;\n      left: 0;\n      right: 0;\n      position: absolute;\n    }\n  </style>\n  <div id=\"graph-container\"></div>\n</div>\n<script>\n/**\n * This is a basic example on how to instantiate sigma. A random graph is\n * generated and stored in the \"graph\" variable, and then sigma is instantiated\n * directly with the graph.\n *\n * The simple instance of sigma is enough to make it render the graph on the on\n * the screen, since the graph is given directly to the constructor.\n */\nvar i,\n    s,\n    N = 100,\n    E = 500,\n    g = {\n      nodes: [],\n      edges: []\n    };\n\n// Generate a random graph:\nfor (i = 0; i < N; i++)\n  g.nodes.push({\n    id: 'n' + i,\n    label: 'Node ' + i,\n    x: Math.random(),\n    y: Math.random(),\n    size: Math.random(),\n    color: '#666'\n  });\n\nfor (i = 0; i < E; i++)\n  g.edges.push({\n    id: 'e' + i,\n    source: 'n' + (Math.random() * N | 0),\n    target: 'n' + (Math.random() * N | 0),\n    size: Math.random(),\n    color: '#ccc'\n  });\n\n// Instantiate sigma:\ns = new sigma({\n  graph: g,\n  container: 'graph-container'\n});\n</script>\n -->",
+			"file": "/Users/princess/Documents/PhD/thesis/code/djangoProject/discoverysite/demo/templates/demo/boost.html",
+			"file_size": 14431,
+			"file_write_time": 132299917360000000,
 			"settings":
 			{
-				"buffer_size": 950,
+				"buffer_size": 14431,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -532,7 +535,107 @@
 			"file": "settings.py",
 			"settings":
 			{
-				"buffer_size": 3146,
+				"buffer_size": 3383,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/princess/Documents/PhD/thesis/code/djangoProject/discoverysite/demo/views.py",
+			"settings":
+			{
+				"buffer_size": 3033,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/princess/Documents/PhD/thesis/code/djangoProject/discoverysite/demo/demoscript.py",
+			"settings":
+			{
+				"buffer_size": 20116,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/princess/Documents/PhD/thesis/code/djangoProject/discoverysite/demo/static/data/tmpgraph.pickle",
+			"settings":
+			{
+				"buffer_size": 2205,
+				"encoding": "Hexadecimal",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/princess/Documents/PhD/thesis/code/djangoProject/discoverysite/demo/test.py",
+			"settings":
+			{
+				"buffer_size": 3271,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "{'sources': \n\t{'Colleges_and_Universities.csv': \n\t\t{'source_res': OrderedDict(\n\t\t\t[('nid', '485805923'), ('db_name', 'csv_repository'), ('source_name', 'Colleges_and_Universities.csv'), ('field_name', 'ALIAS'), ('score', 9.318899)]), \n\t\t'field_res': [\n\t\t\tOrderedDict([('nid', '485805923'), ('db_name', 'csv_repository'), ('source_name', 'Colleges_and_Universities.csv'), ('field_name', 'ALIAS'), ('score', 9.318899)])]\n\t\t}, \n\t'Post-Secondary University Survey Data 2013.csv': \n\t\t{'source_res': OrderedDict(\n\t\t\t[('nid', '631995396'), ('db_name', 'csv_repository'), ('source_name', 'Post-Secondary University Survey Data 2013.csv'), ('field_name', 'F1SYSNAM'), ('score', 10.8818445)]), \n\t\t'field_res': [\n\t\t\tOrderedDict([('nid', '631995396'), ('db_name', 'csv_repository'), ('source_name', 'Post-Secondary University Survey Data 2013.csv'), ('field_name', 'F1SYSNAM'), ('score', 10.8818445)]), \n\t\t\tOrderedDict([('nid', '1315196649'), ('db_name', 'csv_repository'), ('source_name', 'Post-Secondary University Survey Data 2013.csv'), ('field_name', 'INSTNM'), ('score', 9.332386)]), \n\t\t\tOrderedDict([('nid', '2905051006'), ('db_name', 'csv_repository'), ('source_name', 'Post-Secondary University Survey Data 2013.csv'), ('field_name', 'IALIAS'), ('score', 11.474297)])]\n\t\t}, \n\t'companies.csv': \n\t\t{'source_res': OrderedDict(\n\t\t\t[('nid', '3232918382'), ('db_name', 'csv_repository'), ('source_name', 'companies.csv'), ('field_name', '\\ufeffpermalink'), ('score', 11.322897)]), \n\t\t'field_res': [\n\t\t\tOrderedDict([('nid', '3232918382'), ('db_name', 'csv_repository'), ('source_name', 'companies.csv'), ('field_name', '\\ufeffpermalink'), ('score', 11.322897)]), \n\t\t\tOrderedDict([('nid', '446531856'), ('db_name', 'csv_repository'), ('source_name', 'companies.csv'), ('field_name', 'name'), ('score', 13.43623)])]}, \n\t'Rounds.csv': \n\t\t{'source_res': OrderedDict(\n\t\t\t[('nid', '3909970351'), ('db_name', 'csv_repository'), ('source_name', 'Rounds.csv'), ('field_name', '\\ufeffcompany_permalink'), ('score', 11.5383)]), \n\t\t'field_res': [\n\t\tOrderedDict([('nid', '3909970351'), ('db_name', 'csv_repository'), ('source_name', 'Rounds.csv'), ('field_name', '\\ufeffcompany_permalink'), ('score', 11.5383)]), \n\t\tOrderedDict([('nid', '1670272379'), ('db_name', 'csv_repository'), ('source_name', 'Rounds.csv'), ('field_name', 'company_name'), ('score', 13.43623)])]\n\t\t}\n\t}, \n\n\n\t'edges': \n\t[\n\t\t(\n\t\t\tOrderedDict(\n\t\t\t\t[('nid', 0), ('db_name', 'purdue'), ('source_name', 'purdue'), ('field_name', 'purdue'), ('score', -1)]\n\t\t\t\t), \n\t\t\tOrderedDict(\n\t\t\t\t[('nid', '1670272379'), ('db_name', 'csv_repository'), ('source_name', 'Rounds.csv'), ('field_name', 'company_name'), ('score', 13.43623)]\n\t\t\t\t)\n\t\t), \n\t\t(\n\t\t\tOrderedDict(\n\t\t\t\t[('nid', 0), ('db_name', 'purdue'), ('source_name', 'purdue'), ('field_name', 'purdue'), ('score', -1)]\n\t\t\t\t), \n\t\t\tOrderedDict(\n\t\t\t\t[('nid', '446531856'), ('db_name', 'csv_repository'), ('source_name', 'companies.csv'), ('field_name', 'name'), ('score', 13.43623)]\n\t\t\t\t)\n\t\t), \n\t\t(\n\t\t\tOrderedDict([('nid', 0), ('db_name', 'purdue'), ('source_name', 'purdue'), ('field_name', 'purdue'), ('score', -1)]), \n\t\t\tOrderedDict([('nid', '3909970351'), ('db_name', 'csv_repository'), ('source_name', 'Rounds.csv'), ('field_name', '\\ufeffcompany_permalink'), ('score', 11.5383)])\n\t\t), \n\t\t(\n\t\t\tOrderedDict([('nid', 0), ('db_name', 'purdue'), ('source_name', 'purdue'), ('field_name', 'purdue'), ('score', -1)]), \n\t\t\tOrderedDict([('nid', '2905051006'), ('db_name', 'csv_repository'), ('source_name', 'Post-Secondary University Survey Data 2013.csv'), ('field_name', 'IALIAS'), ('score', 11.474297)])\n\t\t), \n\t\t(\n\t\t\tOrderedDict([('nid', 0), ('db_name', 'purdue'), ('source_name', 'purdue'), ('field_name', 'purdue'), ('score', -1)]), \n\t\t\tOrderedDict([('nid', '3232918382'), ('db_name', 'csv_repository'), ('source_name', 'companies.csv'), ('field_name', '\\ufeffpermalink'), ('score', 11.322897)])\n\t\t), \n\t\t(\n\t\t\tOrderedDict([('nid', 0), ('db_name', 'purdue'), ('source_name', 'purdue'), ('field_name', 'purdue'), ('score', -1)]), \n\t\t\tOrderedDict([('nid', '631995396'), ('db_name', 'csv_repository'), ('source_name', 'Post-Secondary University Survey Data 2013.csv'), ('field_name', 'F1SYSNAM'), ('score', 10.8818445)])\n\t\t), \n\t\t(\n\t\t\tOrderedDict([('nid', 0), ('db_name', 'purdue'), ('source_name', 'purdue'), ('field_name', 'purdue'), ('score', -1)]), \n\t\t\tOrderedDict([('nid', '1315196649'), ('db_name', 'csv_repository'), ('source_name', 'Post-Secondary University Survey Data 2013.csv'), ('field_name', 'INSTNM'), ('score', 9.332386)])\n\t\t), \n\t\t(\n\t\t\tOrderedDict([('nid', 0), ('db_name', 'purdue'), ('source_name', 'purdue'), ('field_name', 'purdue'), ('score', -1)]), \n\t\t\tOrderedDict([('nid', '485805923'), ('db_name', 'csv_repository'), ('source_name', 'Colleges_and_Universities.csv'), ('field_name', 'ALIAS'), ('score', 9.318899)]))]}\n",
+			"settings":
+			{
+				"buffer_size": 4820,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "{% load static %}\n<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->\n<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js\"></script>\n{% load static %}\n<!-- Latest compiled and minified JavaScript -->\n<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\" integrity=\"sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa\" crossorigin=\"anonymous\"></script>\n\n\n<!-- START SIGMA IMPORTS -->\n{% load static %}\n<script src=\"{% static \"sigma.js/src/sigma.core.js\" %}\"></script>\n{% load static %}\n<script src=\"{% static \"sigma.js/src/conrad.js\" %}\" ></script>\n{% load static %}\n<script src=\"{% static \"sigma.js/src/utils/sigma.utils.js\" %}\" ></script>\n{% load static %}\n<script src=\"{% static \"sigma.js/src/utils/sigma.polyfills.js\" %}\" ></script>\n{% load static %}\n<script src=\"{% static \"sigma.js/src/sigma.settings.js\" %}\" ></script>\n{% load static %}\n<script src=\"{% static \"sigma.js/src/classes/sigma.classes.dispatcher.js\" %}\" ></script>\n{% load static %}\n<script src=\"{% static \"sigma.js/src/classes/sigma.classes.configurable.js\" %}\" ></script>\n{% load static %}\n<script src=\"{% static \"sigma.js/src/classes/sigma.classes.graph.js\" %}\" ></script>\n{% load static %}\n<script src=\"{% static \"sigma.js/src/classes/sigma.classes.camera.js\" %}\" ></script>\n{% load static %}\n<script src=\"{% static \"sigma.js/src/classes/sigma.classes.quad.js\" %}\" ></script>\n{% load static %}\n<script src=\"{% static \"sigma.js/src/classes/sigma.classes.edgequad.js\" %}\" ></script>\n<script src=\"{% static \"sigma.js/src/captors/sigma.captors.mouse.js\" %}\" ></script>\n<script src=\"{% static \"sigma.js/src/captors/sigma.captors.touch.js\" %}\" ></script>\n<script src=\"{% static \"sigma.js/src/renderers/sigma.renderers.canvas.js\" %}\" ></script>\n<script src=\"{% static \"sigma.js/src/renderers/sigma.renderers.webgl.js\" %}\" ></script>\n<script src=\"{% static \"sigma.js/src/renderers/sigma.renderers.svg.js\" %}\" ></script>\n<script src=\"{% static \"sigma.js/src/renderers/sigma.renderers.def.js\" %}\" ></script>\n<script src=\"{% static \"sigma.js/src/renderers/webgl/sigma.webgl.nodes.def.js\" %}\" ></script>\n<script src=\"{% static \"sigma.js/src/renderers/webgl/sigma.webgl.nodes.fast.js\" %}\" ></script>\n<script src=\"{% static \"sigma.js/src/renderers/webgl/sigma.webgl.edges.def.js\" %}\" ></script>\n<script src=\"{% static \"sigma.js/src/renderers/webgl/sigma.webgl.edges.fast.js\" %}\" ></script>\n<script src=\"{% static \"sigma.js/src/renderers/webgl/sigma.webgl.edges.arrow.js\" %}\" ></script>\n<script src=\"{% static \"sigma.js/src/renderers/canvas/sigma.canvas.labels.def.js\" %}\" ></script>\n<script src=\"{% static \"sigma.js/src/renderers/canvas/sigma.canvas.hovers.def.js\" %}\" ></script>\n<script src=\"{% static \"sigma.js/src/renderers/canvas/sigma.canvas.nodes.def.js\" %}\" ></script>\n<script src=\"{% static \"sigma.js/src/renderers/canvas/sigma.canvas.edges.def.js\" %}\" ></script>\n<script src=\"{% static \"sigma.js/src/renderers/canvas/sigma.canvas.edges.curve.js\" %}\" ></script>\n<script src=\"{% static \"sigma.js/src/renderers/canvas/sigma.canvas.edges.arrow.js\" %}\" ></script>\n<script src=\"{% static \"sigma.js/src/renderers/canvas/sigma.canvas.edges.curvedArrow.js\" %}\" ></script>\n<script src=\"{% static \"sigma.js/src/renderers/canvas/sigma.canvas.edgehovers.def.js\" %}\" ></script>\n<script src=\"{% static \"sigma.js/src/renderers/canvas/sigma.canvas.edgehovers.curve.js\" %}\" ></script>\n<script src=\"{% static \"sigma.js/src/renderers/canvas/sigma.canvas.edgehovers.arrow.js\" %}\" ></script>\n<script src=\"{% static \"sigma.js/src/renderers/canvas/sigma.canvas.edgehovers.curvedArrow.js\" %}\" ></script>\n<script src=\"{% static \"sigma.js/src/renderers/canvas/sigma.canvas.extremities.def.js\" %}\" ></script>\n<script src=\"{% static \"sigma.js/src/renderers/svg/sigma.svg.utils.js\" %}\" ></script>\n<script src=\"{% static \"sigma.js/src/renderers/svg/sigma.svg.nodes.def.js\" %}\" ></script>\n<script src=\"{% static \"sigma.js/src/renderers/svg/sigma.svg.edges.def.js\" %}\" ></script>\n<script src=\"{% static \"sigma.js/src/renderers/svg/sigma.svg.edges.curve.js\" %}\" ></script>\n<script src=\"{% static \"sigma.js/src/renderers/svg/sigma.svg.labels.def.js\" %}\" ></script>\n<script src=\"{% static \"sigma.js/src/renderers/svg/sigma.svg.hovers.def.js\" %}\" ></script>\n<script src=\"{% static \"sigma.js/src/middlewares/sigma.middlewares.rescale.js\" %}\" ></script>\n<script src=\"{% static \"sigma.js/src/middlewares/sigma.middlewares.copy.js\" %}\" ></script>\n<script src=\"{% static \"sigma.js/src/misc/sigma.misc.animation.js\" %}\" ></script>\n<script src=\"{% static \"sigma.js/src/misc/sigma.misc.bindEvents.js\" %}\" ></script>\n<script src=\"{% static \"sigma.js/src/misc/sigma.misc.bindDOMEvents.js\" %}\" ></script>\n<script src=\"{% static \"sigma.js/src/misc/sigma.misc.drawHovers.js\" %}\" ></script>\n<script src=\"{% static \"sigma.js/plugins/sigma.parsers.json/sigma.parsers.json.js\" %}\" ></script>\n<script>\n\n {% block jquery %}\n function showgraph()\n {\n\t // var gdata = 'search/api/graphdata/'\n\t // console.log(gdata)\n\t var gdata = '';\n\t $.ajax({\n\t \tmethod: \"GET\",\n\t \turl: \"../search/api/graphdata/\",\n\t \t// type:\"POST\",\n\t \tsuccess: function(data){\n\t \t\tconsole.log(data)\n\t \t\tgdata = data;\n\t \t},\n\t \terror: function(error_data){\n\t \t\tconsole.log(\"error\")\n\t \t\tconsole.log(error_data)\n\t \t}\n\t })\n\n\t console.log(\"gdata After ...\");\n\t console.log(gdata)\n }\n\ns = new sigma({\n  graph: g,\n  container: 'container'\n});\n\n {% endblock %}\n\n//sigma.parsers.json('data/arctic.json', {\n//  container: 'graph-container'\n//});\n</script>\n\n<div>\n\tHello World !!!!!\n\t\n</div>\n<div><button type=\"button\" onclick=\"showgraph()\">Show</button></div>\n\n<!-- <div id=\"container\">\n  <style>\n    #graph-container {\n      top: 0;\n      bottom: 0;\n      left: 0;\n      right: 0;\n      position: absolute;\n    }\n  </style>\n  <div id=\"graph-container\"></div>\n</div> -->\n\n\n",
+			"file": "/Users/princess/Documents/PhD/thesis/code/djangoProject/discoverysite/demo/templates/demo/results_graph.html",
+			"file_size": 5825,
+			"file_write_time": 132305941610000000,
+			"settings":
+			{
+				"buffer_size": 5825,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "\n{\"nodes\": \n\t[\n\t\t{\"id\": \"485805923\", \"label\": \"Colleges_and_Universities.csv , ALIAS\", \"size\": 2, \"color\": \"#666\", \"attributes\": {\"fieldname\": \"ALIAS\", \"tablename\": \"Colleges_and_Universities.csv\"}}, \n\n\t\t{\"id\": \"2905051006\", \"label\": \"Post-Secondary University Survey Data 2013.csv , IALIAS\", \"size\": 4, \"color\": \"#666\", \"attributes\": {\"fieldname\": \"IALIAS\", \"tablename\": \"Post-Secondary University Survey Data 2013.csv\"}}, \n\n\t\t{\"id\": \"3232918382\", \"label\": \"companies.csv , \\ufeffpermalink\", \"size\": 0, \"color\": \"#666\", \"attributes\": {\"fieldname\": \"\\ufeffpermalink\", \"tablename\": \"companies.csv\"}}, \n\n\t\t{\"id\": \"3909970351\", \"label\": \"Rounds.csv , \\ufeffcompany_permalink\", \"size\": 4, \"color\": \"#666\", \"attributes\": {\"fieldname\": \"\\ufeffcompany_permalink\", \"tablename\": \"Rounds.csv\"}}, \n\n\t\t{\"id\": \"446531856\", \"label\": \"companies.csv , name\", \"size\": 4, \"color\": \"#666\", \"attributes\": {\"fieldname\": \"name\", \"tablename\": \"companies.csv\"}}, \n\n\t\t{\"id\": \"1670272379\", \"label\": \"Rounds.csv , company_name\", \"size\": 2, \"color\": \"#666\", \"attributes\": {\"fieldname\": \"company_name\", \"tablename\": \"Rounds.csv\"}}\n\t], \n\"edges\": \n\t[\n\t\t{\"id\": \"1\", \"label\": \"\", \"source\": \"485805923\", \"target\": \"2905051006\", \"size\": 1, \"color\": \"#666\", \"attributes\": {}}, \n\t\t{\"id\": \"2\", \"label\": \"\", \"source\": \"3232918382\", \"target\": \"3909970351\", \"size\": 1, \"color\": \"#666\", \"attributes\": {}}, \n\t\t{\"id\": \"3\", \"label\": \"\", \"source\": \"3232918382\", \"target\": \"3909970351\", \"size\": 1, \"color\": \"#666\", \"attributes\": {}}, \n\t\t{\"id\": \"4\", \"label\": \"\", \"source\": \"446531856\", \"target\": \"1670272379\", \"size\": 1, \"color\": \"#666\", \"attributes\": {}}, \n\t\t{\"id\": \"5\", \"label\": \"\", \"source\": \"446531856\", \"target\": \"1670272379\", \"size\": 1, \"color\": \"#666\", \"attributes\": {}}]}",
+			"settings":
+			{
+				"buffer_size": 1731,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/princess/Documents/PhD/thesis/code/djangoProject/discoverysite/demo/templates/demo/demov1.html",
+			"settings":
+			{
+				"buffer_size": 26491,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/princess/Documents/PhD/thesis/code/gregroberts.github.io-master/index.html",
+			"settings":
+			{
+				"buffer_size": 18239,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/princess/Documents/PhD/thesis/code/djangoProject/discoverysite/demo/static/css/bootstrap.css",
+			"settings":
+			{
+				"buffer_size": 148019,
+				"encoding": "UTF-8",
+				"line_ending": "Unix",
+				"name": "Skip to content"
+			}
+		},
+		{
+			"file": "/Users/princess/Documents/PhD/thesis/code/djangoProject/discoverysite/demo/urls.py",
+			"settings":
+			{
+				"buffer_size": 746,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
@@ -540,7 +643,7 @@
 			"file": "/Users/princess/Documents/PhD/thesis/code/djangoProject/discoverysite/demo/templates/demo/searchForm.html",
 			"settings":
 			{
-				"buffer_size": 6643,
+				"buffer_size": 628,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -587,9 +690,18 @@
 	},
 	"expanded_folders":
 	[
+		"/Users/princess/Documents/PhD/thesis/code/djangoProject/discoverysite",
+		"/Users/princess/Documents/PhD/thesis/code/djangoProject/discoverysite/demo",
+		"/Users/princess/Documents/PhD/thesis/code/djangoProject/discoverysite/demo/static",
+		"/Users/princess/Documents/PhD/thesis/code/djangoProject/discoverysite/demo/static/css",
+		"/Users/princess/Documents/PhD/thesis/code/djangoProject/discoverysite/demo/static/data",
+		"/Users/princess/Documents/PhD/thesis/code/djangoProject/discoverysite/discoverysite"
 	],
 	"file_history":
 	[
+		"/Users/princess/Documents/PhD/thesis/code/djangoProject/discoverysite/demo/static/data/table_ids.pickle",
+		"/Users/princess/Documents/PhD/thesis/code/djangoProject/discoverysite/demo/demoscript.py",
+		"/Users/princess/Documents/PhD/thesis/code/djangoProject/discoverysite/discoverysite/urls.py",
 		"/Users/princess/Documents/PhD/Courses/CS565/Questions in Coq.txt",
 		"/Users/princess/Documents/PhD/thesis/code/other/testingPlotGraphNetwork.zip",
 		"/Users/princess/Documents/PhD/thesis/code/djangoProject/discoverysite/demo/templates/demo/search.html",
@@ -714,10 +826,7 @@
 		"/Users/princess/Documents/Masters/code/kNNContribution/scripts/test1_PreF_Join_Q4.sh",
 		"/Users/princess/Documents/Masters/code/kNNContribution/scripts/test1_PreF_Join_OIS_HOOK_Q4.sh",
 		"/Users/princess/Documents/Masters/code/kNNContribution/scripts/test1_PoF_OIS_HOOK_Q2.sh",
-		"/Users/princess/output14.txt",
-		"/Users/princess/logfile1.txt",
-		"/Users/princess/output12.txt",
-		"/Users/princess/output11.txt"
+		"/Users/princess/output14.txt"
 	],
 	"find":
 	{
@@ -725,7 +834,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 107.0,
 		"where_history":
 		[
 		]
@@ -735,6 +844,19 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"color",
+			"layout",
+			"container",
+			"serialize_network",
+			"col-md-9",
+			"col-md-3",
+			"form",
+			"container",
+			"locate",
+			"stylesheet",
+			"result",
+			"point",
+			"sigma"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -752,24 +874,170 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "urls.py",
+					"file": "/Users/princess/Documents/PhD/thesis/code/djangoProject/discoverysite/demo/templates/demo/boost.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 950,
+						"buffer_size": 14431,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								914,
-								914
+								13843,
+								14416
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 5282.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "settings.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3383,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3145,
+								3145
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 103.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/Users/princess/Documents/PhD/thesis/code/djangoProject/discoverysite/demo/views.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3033,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2759,
+								2759
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1649.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/Users/princess/Documents/PhD/thesis/code/djangoProject/discoverysite/demo/demoscript.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 20116,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								19926,
+								19951
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 21.0,
+						"translation.y": 11267.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/Users/princess/Documents/PhD/thesis/code/djangoProject/discoverysite/demo/static/data/tmpgraph.pickle",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2205,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/Users/princess/Documents/PhD/thesis/code/djangoProject/discoverysite/demo/test.py",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 3271,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1170,
+								1257
 							]
 						],
 						"settings":
@@ -782,54 +1050,225 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "settings.py",
-					"semi_transient": true,
+					"buffer": 6,
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3146,
+						"buffer_size": 4820,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2948,
-								2948
+								4654,
+								4654
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Python/Python.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Python/Python.sublime-syntax"
 						},
-						"translation.x": 0.0,
-						"translation.y": 1817.0,
+						"translation.x": 61.0,
+						"translation.y": 788.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "/Users/princess/Documents/PhD/thesis/code/djangoProject/discoverysite/demo/templates/demo/searchForm.html",
+					"buffer": 7,
+					"file": "/Users/princess/Documents/PhD/thesis/code/djangoProject/discoverysite/demo/templates/demo/results_graph.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6643,
+						"buffer_size": 5825,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								627,
-								627
+								4901,
+								5415
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1476.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1731,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								425,
+								425
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 11.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "/Users/princess/Documents/PhD/thesis/code/djangoProject/discoverysite/demo/templates/demo/demov1.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 26491,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								14407,
+								14407
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 7680.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "/Users/princess/Documents/PhD/thesis/code/gregroberts.github.io-master/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 18239,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1496,
+								18239
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 11771.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "/Users/princess/Documents/PhD/thesis/code/djangoProject/discoverysite/demo/static/css/bootstrap.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 148019,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								27940,
+								27931
+							]
+						],
+						"settings":
+						{
+							"auto_name": "Skip to content",
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 34225.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "/Users/princess/Documents/PhD/thesis/code/djangoProject/discoverysite/demo/urls.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 746,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								616,
+								616
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "/Users/princess/Documents/PhD/thesis/code/djangoProject/discoverysite/demo/templates/demo/searchForm.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 628,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								192
 							]
 						],
 						"settings":
@@ -840,11 +1279,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 12,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 14,
 					"file": "/Users/princess/Documents/PhD/thesis/code/sigma.js-master/examples/mydemo.html",
 					"semi_transient": false,
 					"settings":
@@ -870,7 +1309,7 @@
 						"translation.y": 989.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 14,
 					"type": "text"
 				}
 			]

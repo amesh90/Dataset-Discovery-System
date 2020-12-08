@@ -9,20 +9,24 @@ from django.template import loader
 from django.views.generic import View
 
 
-from . import demoscript
+#from . import demoscript # old aurum file 
+from . import demoscript2 as demoscript # new 2aurum file
+from . import active_demo
 
-# def index(request):
-#     output = ['Amira', 'Ahmed', 'Shawky', 'Mohamed']
-#     template = loader.get_template('demo/index.html')
-#     context = {
-#         'output': output,
-#     }
-#     return HttpResponse(template.render(context, request))
-    
-#     #return HttpResponse(output)
-#     #return HttpResponse("Hello, world. You're at the demo index.")
+import numpy as np
+
+# ================
+# Global VAriables
 
 tmpgraph_path = '/Users/princess/Documents/PhD/thesis/code/djangoProject/discoverysite/demo/static/data/'
+debug = 1
+
+nids_keyword_Search = {}
+# modelobj = None
+# train_cnt = 1
+
+# ===============
+# Function views
 
 def index(request):
 	context = {'results': '',}
@@ -88,10 +92,28 @@ def graph_data(request):
 	
 	keywords = request.POST['keywords']
 
-	print ('\ngraph_data function\n')
+	print ('\ngraph_data ()\n')
 	gdatajson = {}
-	gdatajson = demoscript.dataDicoveryDemo_main_graph(keywords,'4', tmpgraph_path)
-		
+	result = demoscript.dataDicoveryDemo_main_graph(keywords,'4', tmpgraph_path)
+	gdatajson = result['g_json']
+
+	if debug == 1:
+		print(result)
+	# nids_keyword_Search = request.session.get("nids_keyword_Search")
+	# if not nids_keyword_Search:
+		# nids_keyword_Search =
+	global nids_keyword_Search
+	nids_keyword_Search = result['nids']
+
+	global train_cnt
+	train_cnt = 1
+	global modelobj
+	modelobj = None
+
+	# if debug == 1:
+	# 	print()
+	# 	print(nids_keyword_Search)
+
 	return JsonResponse(gdatajson) #, safe=False)
 
 def expand_with_neighbors(request):
@@ -103,6 +125,166 @@ def expand_with_neighbors(request):
 	print(gdatajson)
 	return JsonResponse(gdatajson)
 	
+def train(request):
+	print ('\ntrain(): \n')
+	
+
+	# create model
+	# modelobj = request.session.get("modelobj")
+	global modelobj
+	global train_cnt
+	global nids_keyword_Search
+
+	if debug == 1:
+		print()
+		print(train_cnt)
+		print(nids_keyword_Search)
+
+	
+	if train_cnt == 1: # first learning iteration
+		train_cnt += 1
+		modelobj = active_demo.activelearning()
+
+		# relevant nids
+		# nids_keyword_Search = request.session.get("nids_keyword_Search")
+		nids = list(nids_keyword_Search.keys())
+		k_samples_nids = np.array(nids)
+		labels = np.ones(len(nids))
+
+		# initialize the learning model, prepare the graph
+		
+		modelobj.train_nids = k_samples_nids.tolist()	
+		modelobj.train_labels = labels.tolist()
+		modelobj.mainlogic('4', k_samples_nids,labels )
+
+		selected_nids = []
+	else: # learning iteration
+
+		if debug == 1:
+			print('\n==================\n')
+			print('Re-Train .... Start ')
+			print()
+		# ==================
+		# get the selection from the oracle (user)
+		relevence = request.POST.get('relevence', '')
+		relevence_nids = relevence.split(',')
+		
+		relevent = []
+		notRelevent = []
+		notrel = 0
+		for i in relevence_nids:
+			if 'not' in i:
+				notrel = 1
+				continue
+			if notrel == 0:
+				try:
+					relevent.append(int(i))
+				except Exception as e:
+					print(str(e))
+			else:
+				try:
+					notRelevent.append(int(i))
+				except Exception as e:
+					print(str(e))
+
+
+		if debug == 1:
+			print('===============================')
+			print('relevent: ')
+			print (relevent)
+			print('\nnotRelevent: ')
+			print (notRelevent)
+			print('===============================')
+
+
+		# =======================
+		# prepare for another learning iteration
+
+		k_samples_nids = modelobj.train_nids 
+		labels = modelobj.train_labels 
+		
+		if debug == 1:
+			print('Old k_samples_nids: ')
+			print (k_samples_nids)
+			print (labels)
+			print()
+
+			
+		# k_samples_nids = []
+		# labels = []
+
+		for i in relevent:
+			if i in k_samples_nids:
+				# update label
+				idx_o = k_samples_nids.index(i)
+				labels[idx] = 1
+			else:
+				k_samples_nids.append(i)
+				labels.append(1)
+
+		for i in notRelevent:
+			if i in k_samples_nids:
+				# update label
+				idx_o = k_samples_nids.index(i)
+				labels[idx] = 0
+			else:
+				k_samples_nids.append(i)
+				labels.append(0)
+
+		k_samples_nids = np.array(k_samples_nids)
+		labels = np.array(labels)
+
+		if debug == 1:
+			print('New k_samples_nids: ')
+			print (k_samples_nids)
+			print (labels)
+			print()
+		# ===========
+		# do training
+		modelobj.oneiter(k_samples_nids, labels)
+
+
+	# select nodes to be labeled by oracle
+	selected_nids =  modelobj.ask_oracle(10)
+	selected_nids_data = demoscript.get_data('4', selected_nids)
+	
+	# return the selected nodes for manual labeling 
+	# return the train, loss accuracy
+	# update the returned graph to include all the relevant nodes after first training iteration
+		
+
+	if debug == 1:
+		print()
+		print("train(): ")
+		print(train_cnt)
+		print(k_samples_nids)
+		print(labels)
+		print(selected_nids)
+
+	# gdatajson = demoscript.expand_with_neighbors('4', tmpgraph_path)
+	gdatajson = {}
+
+	relevant_nids = modelobj.get_relevant_nodes()
+
+	if debug == 1:
+		print()
+		print('train(): relevant_nids')
+	gdata = demoscript.snapshotOfGraph_std('4', relevant_nids, tmpgraph_path)
+
+	tables = []
+	for i in gdata['nids']:
+
+		if gdata['nids'][i]['source_name']  not in tables:
+			tables.append(gdata['nids'][i]['source_name'] )
+
+
+	result = {}
+	result['graph'] = gdata['graph']
+	result['nids_for_label'] = selected_nids_data
+	result['training_acc'] = modelobj.train_acc.item()
+	result['tables'] = ';'.join(tables)
+	return JsonResponse(result)
+
 
 def boost(request):
 	context = {'results': '',}
